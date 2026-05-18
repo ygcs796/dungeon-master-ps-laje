@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5tps8xebqhxc"]
+
+[ext_resource type="PackedScene" uid="uid://c6bia5wq8ih1c" path="res://npc.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://jhcf223v48u1" path="res://main.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://oyvhaae1gu32" path="res://dado.tscn" id="2_h2yge"]
+
+[node name="main" type="Node2D" unique_id=702348245]
+script = ExtResource("1_h2yge")
+
+[node name="npc" parent="." unique_id=2006245109 instance=ExtResource("1_0xm2m")]
+position = Vector2(69, 192)
+
+[node name="dado" parent="." unique_id=1118198925 instance=ExtResource("2_h2yge")]
+
+[connection signal="numero_dado" from="dado" to="." method="_on_dado_numero_dado"]

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c6bia5wq8ih1c"]
+
+[ext_resource type="Script" uid="uid://b8a4ff6l61wpt" path="res://npc.gd" id="1_ideak"]
+
+[node name="npc" type="Node2D" unique_id=2006245109]
+script = ExtResource("1_ideak")
+
+[node name="imagem" type="ColorRect" parent="." unique_id=262059942]
+offset_right = 72.0
+offset_bottom = 152.0
+
+[node name="texto_vida" type="Label" parent="." unique_id=1709967174]
+offset_left = 46.0
+offset_top = 159.0
+offset_right = 111.0
+offset_bottom = 182.0
+text = "Vida: 10 "
+
+[node name="texto_mana" type="Label" parent="." unique_id=1062562349]
+offset_left = 46.0
+offset_top = 179.0
+offset_right = 111.0
+offset_bottom = 202.0
+text = "Mana: 10"
