@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dxlxxovnk1o6v"]
+
+[ext_resource type="Script" uid="uid://dja5xcjqvmitq" path="res://inimigos/inimigo.gd" id="1_030df"]
+
+[node name="inimigo" type="Node2D" unique_id=632361069]
+script = ExtResource("1_030df")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=912347177]
+offset_right = 40.0
+offset_bottom = 40.0

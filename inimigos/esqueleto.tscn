@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bt0aaitcq1lun"]
+
+[ext_resource type="PackedScene" uid="uid://dxlxxovnk1o6v" path="res://inimigos/inimigo.tscn" id="1_fl07q"]
+[ext_resource type="Script" uid="uid://bpqfealh7afk6" path="res://inimigos/esqueleto.gd" id="2_xvng2"]
+
+[node name="esqueleto" unique_id=632361069 instance=ExtResource("1_fl07q")]
+script = ExtResource("2_xvng2")
