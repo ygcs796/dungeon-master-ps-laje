@@ -25,6 +25,7 @@ func tomar_decisao(): # pensei em colocar algum tipo de mecânica enovolvendo o 
 	
 func morre():
 	vivo = false
+	print("morreu")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

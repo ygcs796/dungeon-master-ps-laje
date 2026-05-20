@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bqlx3tajdh077"]
 
-[ext_resource type="Script" uid="uid://d2jpsraoleyml" path="res://entities/npc_base/npc.gd" id="1_twre2"]
+[ext_resource type="Script" uid="uid://d2jpsraoleyml" path="res://entidades/npc_base/npc.gd" id="1_twre2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_twre2"]
 size = Vector2(73, 99)

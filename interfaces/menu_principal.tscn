@@ -65,6 +65,13 @@ theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 32
 text = "Créditos"
 
+[node name="TesteBatalha" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2043774144]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "Batalha Teste"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CreditosButton" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TesteBatalha" to="." method="_on_teste_batalha_pressed"]
