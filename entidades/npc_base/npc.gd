@@ -24,7 +24,7 @@ func tomar_decisao(): # pensei em colocar algum tipo de mecânica enovolvendo o 
 	pass
 	
 func morre():
-	vivo = false
+	queue_free()
 	print("morreu")
 
 # Called when the node enters the scene tree for the first time.

@@ -2,15 +2,129 @@ extends Node2D
 
 @export var ataque_grupo : bool
 
+@onready var guerreiro = $Warrior
+@onready var mago = $Mage
+@onready var ladino = $Rogue
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$VidaGuerreiro.text = "HP: " + str($Warrior.vida)
-	$VidaMago.text = "HP: " + str($Mage.vida)
-	$VidaLadino.text = "HP: " + str($Rogue.vida)
+	#$VidaGuerreiro.text = "HP: " + str($Warrior.vida)
+	#$VidaMago.text = "HP: " + str($Mage.vida)
+	#$VidaLadino.text = "HP: " + str($Rogue.vida)
+	pass
 
+# para as ações dos NPC's
+func sorteador_acoes() -> int:
+	
+	# pelo o que eu entendi, os ataques especiais começam em 1
+	# Tô considerando o ataque normal como zero
+	var numero_escolhido = randi_range(0, 3)
+	
+	return numero_escolhido
 
+func acao_guerreiro() -> void:
+	# verificando se está vivo ou não. Se não, o nó é apagado da cena
+	if (is_instance_valid(guerreiro)): 
+		var acao_escolhida = sorteador_acoes()
+		match (acao_escolhida):
+			0:
+				print("Ataque 0") # só para fins de debug
+				if(is_instance_valid(mago) or is_instance_valid(ladino)):
+					var dano = guerreiro.atacar()
+					if is_instance_valid(mago): # verificando se está vivo
+						mago.receber_dano(dano)
+					if is_instance_valid(ladino): # verificando se está vivo
+						ladino.receber_dano(dano)
+			1:
+				print("Ataque 1") # só para fins de debug
+				guerreiro.ataque_especial(1) # escudo
+			2: 
+				print("Ataque 2") # só para fins de debug
+				if(is_instance_valid(mago) or is_instance_valid(ladino)):
+					var dano = guerreiro.ataque_especial(2) # ESPECIAL_ATAQUE
+					if is_instance_valid(mago): # verificando se está vivo
+						mago.receber_dano(dano)
+					if is_instance_valid(ladino): # verificando se está vivo
+						ladino.receber_dano(dano)
+			3:
+				print("Ataque 3") # só para fins de debug
+				guerreiro.ataque_especial(3) # CHAMAR INIMIGOS
+	return			
+	
+func acao_mago() -> void:
+	# verificando se está vivo ou não. Se não, o nó é apagado da cena
+	if (is_instance_valid(mago)): 
+		var acao_escolhida = sorteador_acoes()
+		match (acao_escolhida):
+			0:
+				print("Ataque 0") # só para fins de debug
+				if(is_instance_valid(guerreiro) or is_instance_valid(ladino)):
+					var dano = mago.atacar()
+					if is_instance_valid(guerreiro): # verificando se está vivo
+						guerreiro.receber_dano(dano)
+					if is_instance_valid(ladino): # verificando se está vivo
+						ladino.receber_dano(dano)
+			1:
+				print("Ataque 1") # só para fins de debug
+				mago.ataque_especial(1) # escudo
+			2: 
+				print("Ataque 2") # só para fins de debug
+				if(is_instance_valid(guerreiro) or is_instance_valid(ladino)):
+					var dano = mago.ataque_especial(2) # ESPECIAL_ATAQUE
+					if is_instance_valid(guerreiro): # verificando se está vivo
+						guerreiro.receber_dano(dano)
+					if is_instance_valid(ladino): # verificando se está vivo
+						ladino.receber_dano(dano)
+			3:
+				print("Ataque 3") # só para fins de debug
+				mago.ataque_especial(3) # CHAMAR INIMIGOS
+	return 
+	
+func acao_ladino() -> void:
+	# verificando se está vivo ou não. Se não, o nó é apagado da cena
+	if (is_instance_valid(ladino)): 
+		var acao_escolhida = sorteador_acoes()
+		match (acao_escolhida):
+			0:
+				print("Ataque 0") # só para fins de debug
+				if(is_instance_valid(mago) or is_instance_valid(guerreiro)):
+					var dano = ladino.atacar()
+					if is_instance_valid(mago): # verificando se está vivo
+						mago.receber_dano(dano)
+					if is_instance_valid(guerreiro): # verificando se está vivo
+						guerreiro.receber_dano(dano)
+			1:
+				print("Ataque 1") # só para fins de debug
+				ladino.ataque_especial(1) # escudo
+			2: 
+				print("Ataque 2") # só para fins de debug
+				if(is_instance_valid(mago) or is_instance_valid(guerreiro)):
+					var dano = ladino.ataque_especial(2) # ESPECIAL_ATAQUE
+					if is_instance_valid(mago): # verificando se está vivo
+						mago.receber_dano(dano)
+					if is_instance_valid(guerreiro): # verificando se está vivo
+						guerreiro.receber_dano(dano)
+			3:
+				print("Ataque 3") # só para fins de debug
+				ladino.ataque_especial(3) # CHAMAR INIMIGOS
+	return			
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
+	# FOR só para testar
+	for i in range(3):
+		# esperar um tempo para começar as batalhas
+		await get_tree().create_timer(5.0).timeout
+		match i:
+			1: 	# Quem ataca primeiro é o guerreiro
+				acao_guerreiro()
+			2: 	# Depois o mago 
+				acao_mago()
+			3: 	# Depois o ladino
+				acao_ladino()
+
 	pass
 
 

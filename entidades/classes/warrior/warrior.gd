@@ -22,6 +22,7 @@ func receber_dano(quantidade: int):
 	
 	if(not usar_escudo):
 		vida -= quantidade
+		$texto_vida.text = "Vida: " + str(vida)
 		
 		if(vida <= 0):
 			morre()

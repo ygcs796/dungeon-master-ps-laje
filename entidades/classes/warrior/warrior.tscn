@@ -1,12 +1,31 @@
 [gd_scene format=3 uid="uid://82n3b2d5p5yj"]
 
-[ext_resource type="PackedScene" uid="uid://bqlx3tajdh077" path="res://entities/npc_base/NPC.tscn" id="1_6s18h"]
-[ext_resource type="Script" uid="uid://cb2vky0k3f6q" path="res://entities/classes/warrior/warrior.gd" id="2_f7phk"]
+[ext_resource type="PackedScene" uid="uid://bqlx3tajdh077" path="res://entidades/npc_base/NPC.tscn" id="1_6s18h"]
+[ext_resource type="Script" uid="uid://cb2vky0k3f6q" path="res://entidades/classes/warrior/warrior.gd" id="2_f7phk"]
 [ext_resource type="Texture2D" uid="uid://duvv5dlmugfa3" path="res://assets/npc/warrior.png" id="3_f7phk"]
 
 [node name="Warrior" unique_id=580321455 instance=ExtResource("1_6s18h")]
 script = ExtResource("2_f7phk")
+especial_defesa = 0
+especial_ataque = 0
+especial_chamar_inimigos = 0
+usar_escudo = false
 
 [node name="Sprite2D" parent="." index="1" unique_id=1188518273]
-scale = Vector2(0.43929017, 0.4421535)
+position = Vector2(5.9604645e-08, 5.9604645e-08)
+scale = Vector2(0.15549266, 0.15650621)
 texture = ExtResource("3_f7phk")
+
+[node name="texto_vida" type="Label" parent="." index="2" unique_id=750782219]
+offset_left = 19.0
+offset_top = 91.0
+offset_right = 84.0
+offset_bottom = 114.0
+text = "Vida: 10 "
+
+[node name="texto_mana" type="Label" parent="." index="3" unique_id=1171128760]
+offset_left = 19.0
+offset_top = 111.0
+offset_right = 90.0
+offset_bottom = 134.0
+text = "Mana: 10"

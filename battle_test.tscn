@@ -7,16 +7,16 @@
 
 [node name="BattleTest" type="Node2D" unique_id=978144693]
 script = ExtResource("1_kt1od")
+ataque_grupo = null
 
 [node name="Rogue" parent="." unique_id=580321455 instance=ExtResource("2_0q417")]
-position = Vector2(833.00006, 281.00003)
+position = Vector2(854, 241)
 scale = Vector2(0.5102701, 0.42617473)
 especial_adagas_envenenadas = 2
 especial_invisibilidade = 2
 especial_arco_e_flecha = 2
 adagas = true
 arco_e_flecha = true
-usar_invisibilidade = false
 constituicao = 7
 vida = 10
 forca = 4
@@ -30,7 +30,6 @@ scale = Vector2(0.21750532, 0.19100595)
 especial_defesa = 2
 especial_ataque = 2
 especial_chamar_inimigos = 2
-usar_escudo = false
 constituicao = 7
 vida = 10
 forca = 7
@@ -39,11 +38,10 @@ magia = 1
 vivo = true
 
 [node name="Mage" parent="." unique_id=919070144 instance=ExtResource("3_0q417")]
-position = Vector2(657, 122)
+position = Vector2(709, 99)
 especial_cura = 2
 especial_barreira_protetora = 2
 especial_bola_de_fogo = 2
-usar_barreira = false
 constituicao = 5
 vida = 10
 forca = 3
@@ -74,24 +72,28 @@ offset_bottom = 381.0
 text = "Atacar"
 
 [node name="VidaGuerreiro" type="Label" parent="." unique_id=245223119]
+visible = false
 offset_left = 261.0
 offset_top = 40.0
 offset_right = 301.0
 offset_bottom = 63.0
 
 [node name="ConstituicaoGuerreiro" type="Label" parent="." unique_id=1345954668]
+visible = false
 offset_left = 338.0
 offset_top = 122.0
 offset_right = 378.0
 offset_bottom = 145.0
 
 [node name="VidaMago" type="Label" parent="." unique_id=1262220744]
+visible = false
 offset_left = 638.0
 offset_top = 43.0
 offset_right = 678.0
 offset_bottom = 66.0
 
 [node name="VidaLadino" type="Label" parent="." unique_id=1112208164]
+visible = false
 offset_left = 751.0
 offset_top = 245.0
 offset_right = 791.0
