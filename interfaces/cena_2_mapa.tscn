@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://26obu1dbr16q"]
+
+[ext_resource type="Script" uid="uid://blb2bxncjnlf8" path="res://interfaces/cena_2_mapa.gd" id="1_c86uj"]
+[ext_resource type="Texture2D" uid="uid://c1wjpguvbqhxc" path="res://assets/background/mapa_rpg.jpg" id="2_8sxv2"]
+
+[node name="cena_2_mapa" type="Control" unique_id=1826694842]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c86uj")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1569560587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8sxv2")
+expand_mode = 1

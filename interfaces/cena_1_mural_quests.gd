@@ -51,6 +51,7 @@ func _ready() -> void:
 	$BarraDialogo/PainelTexto.visible = false
 	$JanelaInserirNome.visible = false
 	$JanelaEscolha.visible = false
+	$FadeOutTela.visible = false
 	
 
 
@@ -123,6 +124,15 @@ func _on_botao_texto_pressed() -> void:
 			$JanelaDistribuicaoAtributos.popup()
 		19:
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago_resposta_positiva[1]
+			
+			$FadeOutTela.visible = true
+			$FadeOutTela/FadeOutAnimacao.play("fade_out")
+			
+			await $FadeOutTela/FadeOutAnimacao.animation_finished
+			
+			get_tree().change_scene_to_file("res://interfaces/cena_2_mapa.tscn")
+		20:
+			get_tree().change_scene_to_file("res://interfaces/cena_2_mapa.tscn")
 			
 				
 
