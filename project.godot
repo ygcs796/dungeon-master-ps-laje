@@ -15,6 +15,19 @@ run/main_scene="uid://dh755yxeoqcnj"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Mage="*uid://cpt4ojovhlpvd"
+Master="*uid://bs4f6co3ypf53"
+Rogue="*uid://dlgpnlurimpmt"
+Warrior="*uid://cb2vky0k3f6q"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

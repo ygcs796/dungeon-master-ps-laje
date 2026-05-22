@@ -1,0 +1,460 @@
+[gd_scene format=3 uid="uid://n7ixee8l4vya"]
+
+[ext_resource type="Script" uid="uid://cnha00ntdswth" path="res://interfaces/cena_1_mural_quests.gd" id="1_k51bt"]
+[ext_resource type="Texture2D" uid="uid://sibrkl8oxd1d" path="res://assets/background/tela_quadro_missoes.png" id="2_qt2wb"]
+[ext_resource type="Texture2D" uid="uid://dmeumnwh5tgfp" path="res://assets/background/inserir_nome.png" id="3_5n0lp"]
+[ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="4_75wv6"]
+[ext_resource type="Texture2D" uid="uid://b4krvxcbv4fr7" path="res://assets/botoes/botao_confirmar.png" id="5_lv4lu"]
+[ext_resource type="Texture2D" uid="uid://u1jsbrenxf4j" path="res://assets/botoes/botao_nao.png" id="6_lv4lu"]
+[ext_resource type="Texture2D" uid="uid://d37bo3qfaqkmf" path="res://assets/botoes/botao_sim.png" id="7_tm1yi"]
+[ext_resource type="Texture2D" uid="uid://diyn23cfcfddn" path="res://assets/background/game_over.png" id="8_tm1yi"]
+[ext_resource type="Texture2D" uid="uid://b325c2uej78u4" path="res://assets/npc/rogue.png" id="9_grrdw"]
+[ext_resource type="Texture2D" uid="uid://doxjpymqplsb0" path="res://assets/botoes/seta_cima.png" id="9_rmafd"]
+[ext_resource type="Texture2D" uid="uid://c3fr36t1dcmue" path="res://assets/botoes/seta_baixo.png" id="10_6btsw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt2wb"]
+bg_color = Color(0, 0, 0, 0.3764706)
+
+[node name="MuralQuests" type="Control" unique_id=738819714]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k51bt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1554523139]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_qt2wb")
+expand_mode = 1
+
+[node name="BotaoAnuncio" type="TextureButton" parent="." unique_id=1972671799]
+layout_mode = 0
+offset_left = 557.3236
+offset_top = 170.76479
+offset_right = 597.3236
+offset_bottom = 210.76479
+scale = Vector2(7.025807, 3.504261)
+
+[node name="Button2" type="Button" parent="." unique_id=1596775787]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 7.9999995
+
+[node name="BarraDialogo" type="HBoxContainer" parent="." unique_id=1399370790]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -555.5
+offset_top = -169.0
+offset_right = 555.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 4
+
+[node name="ImagemPersonagem" type="TextureRect" parent="BarraDialogo" unique_id=1521883987]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PainelTexto" type="Panel" parent="BarraDialogo" unique_id=433625393]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qt2wb")
+
+[node name="TextoDialogo" type="RichTextLabel" parent="BarraDialogo/PainelTexto" unique_id=899707614]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 0
+offset_left = 4.0000153
+offset_right = 904.0
+offset_bottom = 169.0
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/table_border = Color(0, 0, 0, 0.36078432)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/normal_font_size = 24
+
+[node name="BotaoTexto" type="TextureButton" parent="BarraDialogo/PainelTexto/TextoDialogo" unique_id=765542517]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="JanelaInserirNome" type="Window" parent="." unique_id=17860504]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(640, 360)
+visible = false
+exclusive = true
+borderless = true
+
+[node name="ImagemInserirNome" type="TextureRect" parent="JanelaInserirNome" unique_id=1914582245]
+custom_minimum_size = Vector2(640, 360)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5n0lp")
+
+[node name="BarraInserirNome" type="VBoxContainer" parent="JanelaInserirNome/ImagemInserirNome" unique_id=1206302461]
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome" unique_id=1650438525]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 200
+
+[node name="TituloInserirNome" type="RichTextLabel" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer3" unique_id=1986533024]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("4_75wv6")
+theme_override_font_sizes/normal_font_size = 33
+text = "Insira o seu nome"
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome" unique_id=2071122192]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="InputInserirNome" type="LineEdit" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer" unique_id=1552270030]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome" unique_id=683150249]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 50
+
+[node name="BotaoConfirmarNome" type="TextureButton" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer2" unique_id=687436563]
+layout_mode = 2
+texture_normal = ExtResource("5_lv4lu")
+
+[node name="JanelaEscolha" type="Window" parent="." unique_id=872570471]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(320, 180)
+visible = false
+exclusive = true
+borderless = true
+
+[node name="ImagemEscolha" type="TextureRect" parent="JanelaEscolha" unique_id=741004023]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5n0lp")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ContainerEscolha" type="VBoxContainer" parent="JanelaEscolha/ImagemEscolha" unique_id=1135585358]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="TituloEscolha" type="RichTextLabel" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha" unique_id=778463367]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+text = "Você aceita?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContainerBotoes" type="HBoxContainer" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha" unique_id=1480934881]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes" unique_id=635114146]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="BotaoNao" type="TextureButton" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer" unique_id=1818076389]
+layout_mode = 2
+texture_normal = ExtResource("6_lv4lu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes" unique_id=564952017]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 15
+
+[node name="BotaoSim" type="TextureButton" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer2" unique_id=1755324147]
+layout_mode = 2
+texture_normal = ExtResource("7_tm1yi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ContainerGameOver" type="CenterContainer" parent="." unique_id=478019046]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ImagemGameOver" type="TextureRect" parent="ContainerGameOver" unique_id=618021847]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 2
+texture = ExtResource("8_tm1yi")
+
+[node name="BotaoGameOver" type="Button" parent="ContainerGameOver" unique_id=1413848671]
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 2
+
+[node name="JanelaDistribuicaoAtributos" type="Window" parent="." unique_id=355252726]
+oversampling_override = 1.0
+initial_position = 1
+size = Vector2i(640, 540)
+visible = false
+exclusive = true
+borderless = true
+
+[node name="TextureRect" type="TextureRect" parent="JanelaDistribuicaoAtributos" unique_id=1446057138]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_5n0lp")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="JanelaDistribuicaoAtributos" unique_id=1784030955]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer" unique_id=696826567]
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer" unique_id=1803843029]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="GridContainer" type="GridContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2" unique_id=1950654225]
+layout_mode = 2
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 15
+columns = 3
+
+[node name="TextoNarrativa" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1087008411]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "Narrativa"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumeroNarrativa" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=842934940]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetasNarrativa" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=100756673]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="SetaCimaNarrativa" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa" unique_id=1407304876]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+texture_normal = ExtResource("9_rmafd")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="SetaBaixoNarrativa" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa" unique_id=1585391662]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+texture_normal = ExtResource("10_6btsw")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="TextoPersuasao" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1002959855]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "Persuasão"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumeroPersuasao" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=654180625]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetasPerusasao" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1550344949]
+layout_mode = 2
+
+[node name="SetaCimaPesuasao" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasPerusasao" unique_id=433220949]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("9_rmafd")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="SetaBaixoPersuasao" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasPerusasao" unique_id=302687003]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+texture_normal = ExtResource("10_6btsw")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="TextoCriatividade" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=1427940451]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "Criatividade"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumeroCriatividade" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=775895616]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetasCriatividade" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=779626484]
+layout_mode = 2
+
+[node name="SetaCimaCriatividade" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasCriatividade" unique_id=858320224]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+texture_normal = ExtResource("9_rmafd")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="SetaBaixoCriatividade" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasCriatividade" unique_id=1836681894]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+texture_normal = ExtResource("10_6btsw")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="TextoSorte" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=676146646]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "Sorte"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NumeroSorte" type="Label" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=267702054]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_75wv6")
+theme_override_font_sizes/font_size = 28
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SetasSorte" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer" unique_id=541235448]
+layout_mode = 2
+
+[node name="SetaCimaSorte" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte" unique_id=843904619]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+texture_normal = ExtResource("9_rmafd")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="SetaBaixoSorte" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte" unique_id=2052900597]
+custom_minimum_size = Vector2(0, 15)
+layout_mode = 2
+texture_normal = ExtResource("10_6btsw")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer" unique_id=651008093]
+custom_minimum_size = Vector2(0, 151)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="BotaoConfirmarAtributosMestre" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1918986938]
+layout_mode = 2
+texture_normal = ExtResource("5_lv4lu")
+
+[node name="MarginContainer" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer" unique_id=774038821]
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="TextureRect" type="TextureRect" parent="JanelaDistribuicaoAtributos/HBoxContainer/MarginContainer" unique_id=1580818355]
+layout_mode = 2
+texture = ExtResource("9_grrdw")
+expand_mode = 1
+stretch_mode = 6
+
+[connection signal="pressed" from="BotaoAnuncio" to="." method="_on_botao_anuncio_pressed"]
+[connection signal="pressed" from="BarraDialogo/PainelTexto/TextoDialogo/BotaoTexto" to="." method="_on_botao_texto_pressed"]
+[connection signal="pressed" from="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer2/BotaoConfirmarNome" to="." method="_on_botao_confirmar_nome_pressed"]
+[connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer/BotaoNao" to="." method="_on_botao_nao_pressed"]
+[connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer2/BotaoSim" to="." method="_on_botao_sim_pressed"]
+[connection signal="pressed" from="ContainerGameOver/BotaoGameOver" to="." method="_on_botao_game_over_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa/SetaCimaNarrativa" to="." method="_on_seta_cima_narrativa_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa/SetaBaixoNarrativa" to="." method="_on_seta_baixo_narrativa_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasPerusasao/SetaCimaPesuasao" to="." method="_on_seta_cima_pesuasao_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasPerusasao/SetaBaixoPersuasao" to="." method="_on_seta_baixo_persuasao_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasCriatividade/SetaCimaCriatividade" to="." method="_on_seta_cima_criatividade_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasCriatividade/SetaBaixoCriatividade" to="." method="_on_seta_baixo_criatividade_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte/SetaCimaSorte" to="." method="_on_seta_cima_sorte_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte/SetaBaixoSorte" to="." method="_on_seta_baixo_sorte_pressed"]
+[connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer/BotaoConfirmarAtributosMestre" to="." method="_on_botao_confirmar_atributos_mestre_pressed"]
