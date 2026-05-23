@@ -1,6 +1,7 @@
-extends CharacterBody2D
+extends Node2D
 
 @export var pontos_disponiveis : int
+@export var contador_silencio : int
 @export var nome : String
 @export var narrativa : int
 @export var persuasao : int

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1wjpguvbqhxc"
-path="res://.godot/imported/mapa_rpg.jpg-c3a47449f9efd9fbfc852a81879e740a.ctex"
+uid="uid://beco5qkyorie7"
+path="res://.godot/imported/heroi.png-bdfcce530b29127c897a3e67c6d115e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/mapa_rpg.jpg"
-dest_files=["res://.godot/imported/mapa_rpg.jpg-c3a47449f9efd9fbfc852a81879e740a.ctex"]
+source_file="res://assets/npc/heroi.png"
+dest_files=["res://.godot/imported/heroi.png-bdfcce530b29127c897a3e67c6d115e2.ctex"]
 
 [params]
 

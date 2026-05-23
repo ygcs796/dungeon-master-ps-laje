@@ -18,9 +18,9 @@ config/icon="res://icon.svg"
 [autoload]
 
 Mage="*uid://cpt4ojovhlpvd"
-Master="*uid://bs4f6co3ypf53"
 Rogue="*uid://dlgpnlurimpmt"
 Warrior="*uid://cb2vky0k3f6q"
+Master="*uid://s7hwhfcwwrr0"
 
 [display]
 

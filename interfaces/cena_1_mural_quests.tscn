@@ -1,19 +1,16 @@
 [gd_scene format=3 uid="uid://n7ixee8l4vya"]
 
 [ext_resource type="Script" uid="uid://cnha00ntdswth" path="res://interfaces/cena_1_mural_quests.gd" id="1_k51bt"]
-[ext_resource type="Texture2D" uid="uid://sibrkl8oxd1d" path="res://assets/background/tela_quadro_missoes.png" id="2_qt2wb"]
+[ext_resource type="Texture2D" uid="uid://b3v7e3g0swohd" path="res://assets/background/taverna.png" id="2_rmafd"]
 [ext_resource type="Texture2D" uid="uid://dmeumnwh5tgfp" path="res://assets/background/inserir_nome.png" id="3_5n0lp"]
 [ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="4_75wv6"]
 [ext_resource type="Texture2D" uid="uid://b4krvxcbv4fr7" path="res://assets/botoes/botao_confirmar.png" id="5_lv4lu"]
 [ext_resource type="Texture2D" uid="uid://u1jsbrenxf4j" path="res://assets/botoes/botao_nao.png" id="6_lv4lu"]
 [ext_resource type="Texture2D" uid="uid://d37bo3qfaqkmf" path="res://assets/botoes/botao_sim.png" id="7_tm1yi"]
 [ext_resource type="Texture2D" uid="uid://diyn23cfcfddn" path="res://assets/background/game_over.png" id="8_tm1yi"]
-[ext_resource type="Texture2D" uid="uid://b325c2uej78u4" path="res://assets/npc/rogue.png" id="9_grrdw"]
 [ext_resource type="Texture2D" uid="uid://doxjpymqplsb0" path="res://assets/botoes/seta_cima.png" id="9_rmafd"]
 [ext_resource type="Texture2D" uid="uid://c3fr36t1dcmue" path="res://assets/botoes/seta_baixo.png" id="10_6btsw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qt2wb"]
-bg_color = Color(0, 0, 0, 0.3764706)
+[ext_resource type="Texture2D" uid="uid://beco5qkyorie7" path="res://assets/npc/heroi.png" id="11_rmafd"]
 
 [sub_resource type="Animation" id="Animation_rmafd"]
 length = 0.001
@@ -68,68 +65,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qt2wb")
+texture = ExtResource("2_rmafd")
 expand_mode = 1
-
-[node name="BotaoAnuncio" type="TextureButton" parent="." unique_id=1972671799]
-layout_mode = 0
-offset_left = 557.3236
-offset_top = 170.76479
-offset_right = 597.3236
-offset_bottom = 210.76479
-scale = Vector2(7.025807, 3.504261)
-
-[node name="Button2" type="Button" parent="." unique_id=1596775787]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 7.9999995
-
-[node name="BarraDialogo" type="HBoxContainer" parent="." unique_id=1399370790]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -555.5
-offset_top = -169.0
-offset_right = 555.5
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_constants/separation = 4
-
-[node name="ImagemPersonagem" type="TextureRect" parent="BarraDialogo" unique_id=1521883987]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-expand_mode = 1
-stretch_mode = 6
-
-[node name="PainelTexto" type="Panel" parent="BarraDialogo" unique_id=433625393]
-custom_minimum_size = Vector2(900, 0)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_qt2wb")
-
-[node name="TextoDialogo" type="RichTextLabel" parent="BarraDialogo/PainelTexto" unique_id=899707614]
-custom_minimum_size = Vector2(900, 0)
-layout_mode = 0
-offset_left = 4.0000153
-offset_right = 904.0
-offset_bottom = 169.0
-mouse_filter = 2
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
-theme_override_colors/table_border = Color(0, 0, 0, 0.36078432)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
-theme_override_font_sizes/normal_font_size = 24
-
-[node name="BotaoTexto" type="TextureButton" parent="BarraDialogo/PainelTexto/TextoDialogo" unique_id=765542517]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="JanelaInserirNome" type="Window" parent="." unique_id=17860504]
 oversampling_override = 1.0
@@ -476,7 +413,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="TextureRect" type="TextureRect" parent="JanelaDistribuicaoAtributos/HBoxContainer/MarginContainer" unique_id=1580818355]
 layout_mode = 2
-texture = ExtResource("9_grrdw")
+texture = ExtResource("11_rmafd")
 expand_mode = 1
 stretch_mode = 6
 
@@ -494,8 +431,45 @@ color = Color(0, 0, 0, 1)
 [node name="FadeOutAnimacao" type="AnimationPlayer" parent="FadeOutTela" unique_id=2132774850]
 libraries/ = SubResource("AnimationLibrary_cn8n2")
 
-[connection signal="pressed" from="BotaoAnuncio" to="." method="_on_botao_anuncio_pressed"]
-[connection signal="pressed" from="BarraDialogo/PainelTexto/TextoDialogo/BotaoTexto" to="." method="_on_botao_texto_pressed"]
+[node name="BarraDialogo" type="HBoxContainer" parent="." unique_id=1115030443]
+custom_minimum_size = Vector2(1120, 150)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -560.0
+offset_top = -120.0
+offset_right = 560.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ImagemPersonagem" type="TextureRect" parent="BarraDialogo" unique_id=127190641]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+expand_mode = 1
+
+[node name="PainelTexto" type="Panel" parent="BarraDialogo" unique_id=533696256]
+custom_minimum_size = Vector2(970, 0)
+layout_mode = 2
+
+[node name="TextoDialogo" type="RichTextLabel" parent="BarraDialogo/PainelTexto" unique_id=1300143198]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotaoTexto" type="Button" parent="BarraDialogo/PainelTexto/TextoDialogo" unique_id=45747690]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="pressed" from="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer2/BotaoConfirmarNome" to="." method="_on_botao_confirmar_nome_pressed"]
 [connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer/BotaoNao" to="." method="_on_botao_nao_pressed"]
 [connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer2/BotaoSim" to="." method="_on_botao_sim_pressed"]
@@ -509,3 +483,4 @@ libraries/ = SubResource("AnimationLibrary_cn8n2")
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte/SetaCimaSorte" to="." method="_on_seta_cima_sorte_pressed"]
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasSorte/SetaBaixoSorte" to="." method="_on_seta_baixo_sorte_pressed"]
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer/BotaoConfirmarAtributosMestre" to="." method="_on_botao_confirmar_atributos_mestre_pressed"]
+[connection signal="pressed" from="BarraDialogo/PainelTexto/TextoDialogo/BotaoTexto" to="." method="_on_botao_texto_pressed"]

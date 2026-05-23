@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv861pf30x8n4"
-path="res://.godot/imported/rogue.png-efff30fe071aeabba62083d00bab228d.ctex"
+uid="uid://b3v7e3g0swohd"
+path="res://.godot/imported/taverna.png-77960b1f8d6b0b494a656cc8b28b5b8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/rogue.png"
-dest_files=["res://.godot/imported/rogue.png-efff30fe071aeabba62083d00bab228d.ctex"]
+source_file="res://assets/background/taverna.png"
+dest_files=["res://.godot/imported/taverna.png-77960b1f8d6b0b494a656cc8b28b5b8b.ctex"]
 
 [params]
 

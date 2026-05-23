@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dh755yxeoqcnj"]
 
 [ext_resource type="Script" uid="uid://dnjlkhqcbnf7n" path="res://interfaces/menu_principal.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://ctk7a66semb47" path="res://assets/background/tela_menu_template.jpg" id="2_aevnb"]
+[ext_resource type="Texture2D" uid="uid://sibrkl8oxd1d" path="res://assets/background/tela_quadro_missoes.png" id="2_aevnb"]
 [ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="3_8ln24"]
 
 [node name="Main_menu" type="Control" unique_id=1711472036]

@@ -48,22 +48,19 @@ var texto_ladina_resposta_positiva = [
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	quantidade_cliques = 0
-	$BarraDialogo/PainelTexto.visible = false
 	$JanelaInserirNome.visible = false
 	$JanelaEscolha.visible = false
 	$FadeOutTela.visible = false
+	
+	$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
+	$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago[0]
+	$ContainerGameOver.visible = false
 	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func _on_botao_anuncio_pressed() -> void:
-	$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
-	$BarraDialogo/PainelTexto.visible = true
-	$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago[0]
-	$ContainerGameOver.visible = false
 
 func _on_botao_texto_pressed() -> void:
 	
