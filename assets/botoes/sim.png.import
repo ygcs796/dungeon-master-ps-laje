@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso7opid5oiey"
-path="res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"
+uid="uid://bn60nq32n3igw"
+path="res://.godot/imported/sim.png-c292d052eabb0ca2e7ba3bb8275f8ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/mage.png"
-dest_files=["res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"]
+source_file="res://assets/botoes/sim.png"
+dest_files=["res://.godot/imported/sim.png-c292d052eabb0ca2e7ba3bb8275f8ecb.ctex"]
 
 [params]
 

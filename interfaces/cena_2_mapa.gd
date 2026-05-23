@@ -76,7 +76,6 @@ func _on_botao_texto_pressed() -> void:
 		dialogo_2()
 	elif(decisao_1 == 3):
 		Master.contador_silencio += 1
-		print(Master.contador_silencio)
 		dialogo_3()
 
 func dialogo_1() -> void:
@@ -94,7 +93,7 @@ func dialogo_1() -> void:
 			
 			await $FadeOutTela/FadeOutAnimacao.animation_finished
 			
-			get_tree().change_scene_to_file("res://interfaces/cena_2_mapa.tscn")
+			get_tree().change_scene_to_file("res://interfaces/cena_3_caverna.tscn")
 func dialogo_2() -> void:
 	
 	quantidade_cliques += 1
@@ -112,7 +111,7 @@ func dialogo_2() -> void:
 			
 			await $FadeOutTela/FadeOutAnimacao.animation_finished
 			
-			get_tree().change_scene_to_file("res://interfaces/cena_2_mapa.tscn")
+			get_tree().change_scene_to_file("res://interfaces/cena_3_caverna.tscn")
 
 func dialogo_3() -> void:
 	
@@ -129,4 +128,4 @@ func dialogo_3() -> void:
 			
 			await $FadeOutTela/FadeOutAnimacao.animation_finished
 			
-			get_tree().change_scene_to_file("res://interfaces/cena_2_mapa.tscn")
+			get_tree().change_scene_to_file("res://interfaces/cena_3_caverna.tscn")

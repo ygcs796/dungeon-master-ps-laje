@@ -54,7 +54,8 @@ func _ready() -> void:
 	
 	$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
 	$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago[0]
-	$ContainerGameOver.visible = false
+	$ImagemGameOver.visible = false
+	$BotaoGameOver.visible = false
 	
 
 
@@ -115,7 +116,14 @@ func _on_botao_texto_pressed() -> void:
 				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago_resposta_positiva[0]
 			else:
-				$ContainerGameOver.visible = true
+				$FadeOutTela.visible = true
+				$FadeOutTela/FadeOutAnimacao.play("fade_out")
+			
+				await $FadeOutTela/FadeOutAnimacao.animation_finished
+				$FadeOutTela.visible = false
+				$ImagemGameOver.visible = true
+				$BotaoGameOver.visible = true
+				$BarraDialogo.visible = false
 		18:
 			Master.pontos_disponiveis = 3
 			$JanelaDistribuicaoAtributos.popup()

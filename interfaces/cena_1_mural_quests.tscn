@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://n7ixee8l4vya"]
 
 [ext_resource type="Script" uid="uid://cnha00ntdswth" path="res://interfaces/cena_1_mural_quests.gd" id="1_k51bt"]
-[ext_resource type="Texture2D" uid="uid://b3v7e3g0swohd" path="res://assets/background/taverna.png" id="2_rmafd"]
+[ext_resource type="Texture2D" uid="uid://w6ct86vfqk80" path="res://assets/background/fundo_taverna.png" id="2_rmafd"]
 [ext_resource type="Texture2D" uid="uid://dmeumnwh5tgfp" path="res://assets/background/inserir_nome.png" id="3_5n0lp"]
 [ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="4_75wv6"]
-[ext_resource type="Texture2D" uid="uid://b4krvxcbv4fr7" path="res://assets/botoes/botao_confirmar.png" id="5_lv4lu"]
-[ext_resource type="Texture2D" uid="uid://u1jsbrenxf4j" path="res://assets/botoes/botao_nao.png" id="6_lv4lu"]
-[ext_resource type="Texture2D" uid="uid://d37bo3qfaqkmf" path="res://assets/botoes/botao_sim.png" id="7_tm1yi"]
+[ext_resource type="Texture2D" uid="uid://cicnurilk54tx" path="res://assets/botoes/confirmar.png" id="5_qf7p7"]
+[ext_resource type="Texture2D" uid="uid://bkchx0nesy3pq" path="res://assets/botoes/nao.png" id="6_qf7p7"]
+[ext_resource type="Texture2D" uid="uid://bn60nq32n3igw" path="res://assets/botoes/sim.png" id="7_rmafd"]
 [ext_resource type="Texture2D" uid="uid://diyn23cfcfddn" path="res://assets/background/game_over.png" id="8_tm1yi"]
+[ext_resource type="Texture2D" uid="uid://chh7ns5qj5sqi" path="res://assets/botoes/voltar.png" id="9_6btsw"]
 [ext_resource type="Texture2D" uid="uid://doxjpymqplsb0" path="res://assets/botoes/seta_cima.png" id="9_rmafd"]
 [ext_resource type="Texture2D" uid="uid://c3fr36t1dcmue" path="res://assets/botoes/seta_baixo.png" id="10_6btsw"]
-[ext_resource type="Texture2D" uid="uid://beco5qkyorie7" path="res://assets/npc/heroi.png" id="11_rmafd"]
 
 [sub_resource type="Animation" id="Animation_rmafd"]
 length = 0.001
@@ -68,6 +68,20 @@ grow_vertical = 2
 texture = ExtResource("2_rmafd")
 expand_mode = 1
 
+[node name="FadeOutTela" type="CanvasLayer" parent="." unique_id=307728400]
+
+[node name="ColorRect" type="ColorRect" parent="FadeOutTela" unique_id=418644835]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FadeOutAnimacao" type="AnimationPlayer" parent="FadeOutTela" unique_id=2132774850]
+libraries/ = SubResource("AnimationLibrary_cn8n2")
+
 [node name="JanelaInserirNome" type="Window" parent="." unique_id=17860504]
 oversampling_override = 1.0
 initial_position = 1
@@ -122,14 +136,16 @@ layout_mode = 2
 [node name="MarginContainer2" type="MarginContainer" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome" unique_id=683150249]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
-theme_override_constants/margin_left = 200
+theme_override_constants/margin_left = 270
 theme_override_constants/margin_top = 0
-theme_override_constants/margin_right = 200
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_right = 270
+theme_override_constants/margin_bottom = 80
 
 [node name="BotaoConfirmarNome" type="TextureButton" parent="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer2" unique_id=687436563]
 layout_mode = 2
-texture_normal = ExtResource("5_lv4lu")
+texture_normal = ExtResource("5_qf7p7")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="JanelaEscolha" type="Window" parent="." unique_id=872570471]
 oversampling_override = 1.0
@@ -180,7 +196,7 @@ theme_override_constants/margin_bottom = 15
 
 [node name="BotaoNao" type="TextureButton" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer" unique_id=1818076389]
 layout_mode = 2
-texture_normal = ExtResource("6_lv4lu")
+texture_normal = ExtResource("6_qf7p7")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -194,32 +210,32 @@ theme_override_constants/margin_bottom = 15
 
 [node name="BotaoSim" type="TextureButton" parent="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer2" unique_id=1755324147]
 layout_mode = 2
-texture_normal = ExtResource("7_tm1yi")
+texture_normal = ExtResource("7_rmafd")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="ContainerGameOver" type="CenterContainer" parent="." unique_id=478019046]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ImagemGameOver" type="TextureRect" parent="ContainerGameOver" unique_id=618021847]
+[node name="ImagemGameOver" type="TextureRect" parent="." unique_id=618021847]
 custom_minimum_size = Vector2(1280, 720)
-layout_mode = 2
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
 texture = ExtResource("8_tm1yi")
+expand_mode = 1
 
-[node name="BotaoGameOver" type="Button" parent="ContainerGameOver" unique_id=1413848671]
+[node name="BotaoGameOver" type="Button" parent="." unique_id=1413848671]
 custom_minimum_size = Vector2(1280, 720)
-layout_mode = 2
+layout_mode = 0
+offset_left = 587.0
+offset_top = 643.99994
+offset_right = 1946.0
+offset_bottom = 1372.0
+scale = Vector2(0.091179095, 0.066719)
+icon = ExtResource("9_6btsw")
 
 [node name="JanelaDistribuicaoAtributos" type="Window" parent="." unique_id=355252726]
 oversampling_override = 1.0
 initial_position = 1
-size = Vector2i(640, 540)
+size = Vector2i(640, 360)
 visible = false
 exclusive = true
 borderless = true
@@ -241,15 +257,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer" unique_id=696826567]
+custom_minimum_size = Vector2(640, 0)
 layout_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer" unique_id=1803843029]
-custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
-theme_override_constants/margin_bottom = 40
+theme_override_constants/margin_bottom = 0
 
 [node name="GridContainer" type="GridContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2" unique_id=1950654225]
 layout_mode = 2
@@ -392,8 +409,10 @@ ignore_texture_size = true
 stretch_mode = 6
 
 [node name="MarginContainer" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer" unique_id=651008093]
-custom_minimum_size = Vector2(0, 151)
+custom_minimum_size = Vector2(200, 135)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_constants/margin_left = 40
 theme_override_constants/margin_top = 40
 theme_override_constants/margin_right = 40
@@ -401,35 +420,9 @@ theme_override_constants/margin_bottom = 40
 
 [node name="BotaoConfirmarAtributosMestre" type="TextureButton" parent="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer" unique_id=1918986938]
 layout_mode = 2
-texture_normal = ExtResource("5_lv4lu")
-
-[node name="MarginContainer" type="MarginContainer" parent="JanelaDistribuicaoAtributos/HBoxContainer" unique_id=774038821]
-custom_minimum_size = Vector2(320, 0)
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="TextureRect" type="TextureRect" parent="JanelaDistribuicaoAtributos/HBoxContainer/MarginContainer" unique_id=1580818355]
-layout_mode = 2
-texture = ExtResource("11_rmafd")
-expand_mode = 1
-stretch_mode = 6
-
-[node name="FadeOutTela" type="CanvasLayer" parent="." unique_id=307728400]
-
-[node name="ColorRect" type="ColorRect" parent="FadeOutTela" unique_id=418644835]
-modulate = Color(1, 1, 1, 0)
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="FadeOutAnimacao" type="AnimationPlayer" parent="FadeOutTela" unique_id=2132774850]
-libraries/ = SubResource("AnimationLibrary_cn8n2")
+texture_normal = ExtResource("5_qf7p7")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="BarraDialogo" type="HBoxContainer" parent="." unique_id=1115030443]
 custom_minimum_size = Vector2(1120, 150)
@@ -473,7 +466,7 @@ grow_vertical = 2
 [connection signal="pressed" from="JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer2/BotaoConfirmarNome" to="." method="_on_botao_confirmar_nome_pressed"]
 [connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer/BotaoNao" to="." method="_on_botao_nao_pressed"]
 [connection signal="pressed" from="JanelaEscolha/ImagemEscolha/ContainerEscolha/ContainerBotoes/MarginContainer2/BotaoSim" to="." method="_on_botao_sim_pressed"]
-[connection signal="pressed" from="ContainerGameOver/BotaoGameOver" to="." method="_on_botao_game_over_pressed"]
+[connection signal="pressed" from="BotaoGameOver" to="." method="_on_botao_game_over_pressed"]
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa/SetaCimaNarrativa" to="." method="_on_seta_cima_narrativa_pressed"]
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasNarrativa/SetaBaixoNarrativa" to="." method="_on_seta_baixo_narrativa_pressed"]
 [connection signal="pressed" from="JanelaDistribuicaoAtributos/HBoxContainer/VBoxContainer/MarginContainer2/GridContainer/SetasPerusasao/SetaCimaPesuasao" to="." method="_on_seta_cima_pesuasao_pressed"]

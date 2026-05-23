@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://bvvt7wp0iki1n"]
+
+[ext_resource type="Script" uid="uid://dawnvi5wd6fbv" path="res://interfaces/cena_3_caverna.gd" id="1_hhtxo"]
+[ext_resource type="Texture2D" uid="uid://cfn2k173tjov0" path="res://assets/background/entrada_caverna.png" id="2_shf8c"]
+[ext_resource type="Texture2D" uid="uid://beco5qkyorie7" path="res://assets/npc/heroi.png" id="3_hhtxo"]
+
+[sub_resource type="Animation" id="Animation_rmafd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6btsw"]
+resource_name = "fade_out"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b53t2"]
+_data = {
+&"RESET": SubResource("Animation_rmafd"),
+&"fade_out": SubResource("Animation_6btsw")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsu40"]
+bg_color = Color(0, 0, 0, 0.32941177)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="cena_3_caverna" type="Control" unique_id=1163839647]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hhtxo")
+
+[node name="FadeOutTela" type="CanvasLayer" parent="." unique_id=187971899]
+
+[node name="ColorRect" type="ColorRect" parent="FadeOutTela" unique_id=1782848996]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="FadeOutAnimacao" type="AnimationPlayer" parent="FadeOutTela" unique_id=1441042414]
+libraries/ = SubResource("AnimationLibrary_b53t2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=187929217]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_shf8c")
+expand_mode = 1
+
+[node name="BarraDialogo" type="HBoxContainer" parent="." unique_id=1895637733]
+visible = false
+custom_minimum_size = Vector2(1120, 150)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -562.0
+offset_top = -150.0
+offset_right = 562.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ImagemPersonagem" type="TextureRect" parent="BarraDialogo" unique_id=1947013701]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+expand_mode = 1
+
+[node name="PainelTexto" type="Panel" parent="BarraDialogo" unique_id=1692145555]
+custom_minimum_size = Vector2(970, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wsu40")
+
+[node name="TextoDialogo" type="RichTextLabel" parent="BarraDialogo/PainelTexto" unique_id=459167195]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BotaoTexto" type="Button" parent="BarraDialogo/PainelTexto/TextoDialogo" unique_id=1816878932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SeletorEscolhas" type="GridContainer" parent="." unique_id=1341786558]
+custom_minimum_size = Vector2(1120, 150)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -603.5
+offset_top = -181.0
+offset_right = 603.5
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 25
+columns = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SeletorEscolhas" unique_id=1568034639]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BotaoOpcao1" type="Button" parent="SeletorEscolhas/MarginContainer" unique_id=1577547930]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "[1] Uma caverna escura com dois caminhos."
+
+[node name="MarginContainer2" type="MarginContainer" parent="SeletorEscolhas" unique_id=636737747]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BotaoOpcao2" type="Button" parent="SeletorEscolhas/MarginContainer2" unique_id=2102601269]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "[2] Não é sobre o que vocês estão vendo, mas sentindo. Os gritos que ecoam dos corredores,
+o uivo de animais que fazem seu ninho nas sombras, o cheiro de terra úmida... Vocês estão
+definitivamente em uma caverna. E há dois caminhos. (Requer narrativa 1)"
+
+[node name="MarginContainer3" type="MarginContainer" parent="SeletorEscolhas" unique_id=1910281111]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BotaoOpcao3" type="Button" parent="SeletorEscolhas/MarginContainer3" unique_id=1735731682]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "[3] Vocês estão em uma caverna. Vocês ouvem passos e veem um herói perdido, 
+entrando correndo caverna a dentro. Ele já estava lá antes de vocês. Porém, 
+antes de desaparecer, ele diz: não me sigam. (Requer narrativa 3)
+"
+
+[node name="MarginContainer4" type="MarginContainer" parent="SeletorEscolhas" unique_id=58907101]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BotaoOpcao4" type="Button" parent="SeletorEscolhas/MarginContainer4" unique_id=247287967]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "[4] Ficar em silêncio..."
+
+[node name="HeroiPerdido" type="TextureRect" parent="." unique_id=810585278]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 242.0
+offset_right = 3733.6416
+offset_bottom = 3975.2039
+scale = Vector2(0.07205607, 0.07205607)
+texture = ExtResource("3_hhtxo")
+
+[connection signal="pressed" from="BarraDialogo/PainelTexto/TextoDialogo/BotaoTexto" to="." method="_on_botao_texto_pressed"]
+[connection signal="pressed" from="SeletorEscolhas/MarginContainer/BotaoOpcao1" to="." method="_on_botao_opcao_1_pressed"]
+[connection signal="pressed" from="SeletorEscolhas/MarginContainer2/BotaoOpcao2" to="." method="_on_botao_opcao_2_pressed"]
+[connection signal="pressed" from="SeletorEscolhas/MarginContainer3/BotaoOpcao3" to="." method="_on_botao_opcao_3_pressed"]
+[connection signal="pressed" from="SeletorEscolhas/MarginContainer4/BotaoOpcao4" to="." method="_on_botao_opcao_4_pressed"]
