@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dpp76jm5htwyn"]
+
+[ext_resource type="PackedScene" uid="uid://bqlx3tajdh077" path="res://entidades/npc_base/NPC.tscn" id="1_quceg"]
+[ext_resource type="Script" uid="uid://cpt4ojovhlpvd" path="res://entidades/classes/mage/mage.gd" id="2_qjy21"]
+[ext_resource type="Texture2D" uid="uid://dpw617drticm1" path="res://assets/npc/mage.png" id="3_gbvqu"]
+
+[node name="Mage" unique_id=919070144 instance=ExtResource("1_quceg")]
+script = ExtResource("2_qjy21")
+especial_cura = 0
+especial_barreira_protetora = 0
+especial_bola_de_fogo = 0
+usar_barreira = false
+vida = 10
+
+[node name="Sprite2D" parent="." index="1" unique_id=1188518273]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_gbvqu")
+
+[node name="texto_vida" type="Label" parent="." index="2" unique_id=826498608]
+offset_left = 11.0
+offset_top = 60.0
+offset_right = 76.0
+offset_bottom = 83.0
+text = "Vida: 10 "
+
+[node name="texto_mana" type="Label" parent="." index="3" unique_id=1819541558]
+offset_left = 11.0
+offset_top = 80.0
+offset_right = 82.0
+offset_bottom = 103.0
+text = "Mana: 10"

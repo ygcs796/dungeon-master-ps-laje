@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ba6bjjdvidxkm"]
+
+[ext_resource type="PackedScene" uid="uid://bqlx3tajdh077" path="res://entidades/npc_base/NPC.tscn" id="1_jjiue"]
+[ext_resource type="Script" uid="uid://dlgpnlurimpmt" path="res://entidades/classes/rogue/rogue.gd" id="2_1xnkq"]
+[ext_resource type="Texture2D" uid="uid://b325c2uej78u4" path="res://assets/npc/rogue.png" id="3_1xnkq"]
+
+[node name="Rogue" unique_id=580321455 instance=ExtResource("1_jjiue")]
+script = ExtResource("2_1xnkq")
+especial_adagas_envenenadas = 0
+especial_invisibilidade = 0
+especial_arco_e_flecha = 0
+adagas = false
+arco_e_flecha = false
+usar_invisibilidade = false
+vida = 10
+
+[node name="Sprite2D" parent="." index="1" unique_id=1188518273]
+position = Vector2(2.3841858e-07, 0)
+scale = Vector2(0.5924353, 0.5855217)
+texture = ExtResource("3_1xnkq")
+
+[node name="texto_vida" type="Label" parent="." index="2" unique_id=515626092]
+offset_left = 28.0
+offset_top = 195.0
+offset_right = 133.0
+offset_bottom = 231.0
+theme_override_font_sizes/font_size = 26
+text = "Vida: 10 "
+
+[node name="texto_mana" type="Label" parent="." index="3" unique_id=1725833164]
+offset_left = 28.0
+offset_top = 231.0
+offset_right = 142.0
+offset_bottom = 267.0
+theme_override_font_sizes/font_size = 26
+text = "Mana: 10"

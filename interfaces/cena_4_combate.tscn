@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://bvvt7wp0iki1n"]
+
+[ext_resource type="Script" uid="uid://dawnvi5wd6fbv" path="res://interfaces/cena_4_combate.gd" id="1_hvo0j"]
+[ext_resource type="Texture2D" uid="uid://ohotxlg5jkmv" path="res://assets/background/tela_caverna.png" id="2_2ko8i"]
+[ext_resource type="Texture2D" uid="uid://cnewex7dtqogk" path="res://assets/npc/warrior.png" id="4_kiu7s"]
+[ext_resource type="Texture2D" uid="uid://dso7opid5oiey" path="res://assets/npc/mage.png" id="5_mavfg"]
+[ext_resource type="Texture2D" uid="uid://dkj2dvo5xa3ak" path="res://assets/npc/rogue.png" id="6_6u6il"]
+[ext_resource type="Script" uid="uid://cc43se60w5q0x" path="res://interfaces/inimigo_teste.gd" id="7_r3snv"]
+[ext_resource type="Texture2D" uid="uid://bhljof8dqti54" path="res://assets/image-removebg-preview (21).png" id="8_3lptg"]
+[ext_resource type="PackedScene" uid="uid://bfpt5jsjk66g8" path="res://caixa_dialogo.tscn" id="9_buhje"]
+[ext_resource type="PackedScene" uid="uid://oyvhaae1gu32" path="res://dado.tscn" id="10_akwui"]
+[ext_resource type="Script" uid="uid://cbrq16tyergeo" path="res://interfaces/botoes_mestre.gd" id="11_hgt6k"]
+
+[node name="Control" type="Control" unique_id=926389464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hvo0j")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=995678879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2ko8i")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2019594165]
+custom_minimum_size = Vector2(200, 300)
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=544147983]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1810493512]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("4_kiu7s")
+expand_mode = 1
+
+[node name="VidaGuerreiro" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1907416829]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1251155606]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer2" unique_id=1546655950]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("5_mavfg")
+expand_mode = 1
+
+[node name="VidaMago" type="Label" parent="VBoxContainer/HBoxContainer2" unique_id=1218484231]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer" unique_id=2025389058]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer3" unique_id=793837967]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("6_6u6il")
+expand_mode = 1
+
+[node name="VidaLadina" type="Label" parent="VBoxContainer/HBoxContainer3" unique_id=1391250021]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="Inimigo" type="Node2D" parent="." unique_id=601738361]
+script = ExtResource("7_r3snv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Inimigo" unique_id=1243319064]
+position = Vector2(645, 477.00003)
+scale = Vector2(0.6026057, 0.43694666)
+texture = ExtResource("8_3lptg")
+
+[node name="NomeInimigo" type="Label" parent="Inimigo" unique_id=45218936]
+offset_left = 603.00006
+offset_top = 277.0
+offset_right = 643.00006
+offset_bottom = 300.0
+scale = Vector2(1.8229818, 1.2854297)
+text = "RESTON"
+
+[node name="VidaInimigo" type="Label" parent="Inimigo" unique_id=485978423]
+offset_left = 605.0
+offset_top = 311.0
+offset_right = 645.0
+offset_bottom = 334.0
+scale = Vector2(1.8229818, 1.2854297)
+
+[node name="caixa_dialogo" parent="." unique_id=1424237801 instance=ExtResource("9_buhje")]
+visible = false
+layout_mode = 1
+offset_left = -557.5
+offset_right = 557.5
+
+[node name="dado" parent="." unique_id=1118198925 instance=ExtResource("10_akwui")]
+position = Vector2(1136, 325)
+scale = Vector2(0.7, 0.7)
+
+[node name="perda_vida_inimigo" type="Label" parent="." unique_id=602801358]
+layout_mode = 0
+offset_left = 729.0
+offset_top = 340.0
+offset_right = 771.0
+offset_bottom = 391.0
+theme_override_colors/font_color = Color(0.75611395, 3.3691526e-06, 7.70092e-07, 1)
+theme_override_font_sizes/font_size = 37
+text = "+1"
+
+[node name="botoes_mestre" type="VBoxContainer" parent="." unique_id=44188768]
+custom_minimum_size = Vector2(1115, 169)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = -20.0
+offset_right = 10.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("11_hgt6k")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="botoes_mestre" unique_id=601870786]
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="botoes_mestre/HBoxContainer" unique_id=1997746921]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ataque_especial" type="Button" parent="botoes_mestre/HBoxContainer/MarginContainer" unique_id=1743515591]
+custom_minimum_size = Vector2(557, 0)
+layout_mode = 2
+disabled = true
+text = "USAR ATAQUE ESPECIAL (0/2)
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="botoes_mestre/HBoxContainer" unique_id=99145718]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="escudo" type="Button" parent="botoes_mestre/HBoxContainer/MarginContainer2" unique_id=896925943]
+custom_minimum_size = Vector2(557, 0)
+layout_mode = 2
+text = "USAR ESCUDO"
+
+[node name="MarginContainer" type="MarginContainer" parent="botoes_mestre" unique_id=1138524528]
+layout_mode = 2
+theme_override_constants/margin_left = 288
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 288
+theme_override_constants/margin_bottom = 10
+
+[node name="ataque_simples" type="Button" parent="botoes_mestre/MarginContainer" unique_id=726657262]
+custom_minimum_size = Vector2(0, 84)
+layout_mode = 2
+text = "ATAQUE SIMPLES"
+
+[connection signal="button_down" from="botoes_mestre/HBoxContainer/MarginContainer/ataque_especial" to="botoes_mestre" method="_on_ataque_especial_button_down"]
+[connection signal="button_down" from="botoes_mestre/HBoxContainer/MarginContainer2/escudo" to="botoes_mestre" method="_on_escudo_button_down"]
+[connection signal="button_down" from="botoes_mestre/MarginContainer/ataque_simples" to="botoes_mestre" method="_on_ataque_simples_button_down"]

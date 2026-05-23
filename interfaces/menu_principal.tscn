@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dh755yxeoqcnj"]
 
 [ext_resource type="Script" uid="uid://dnjlkhqcbnf7n" path="res://interfaces/menu_principal.gd" id="1_bqqt6"]
-[ext_resource type="Texture2D" uid="uid://ctk7a66semb47" path="res://assets/background/tela_menu_template.jpg" id="2_aevnb"]
+[ext_resource type="Texture2D" uid="uid://sibrkl8oxd1d" path="res://assets/background/tela_quadro_missoes.png" id="2_aevnb"]
 [ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="3_8ln24"]
 
 [node name="Main_menu" type="Control" unique_id=1711472036]
@@ -65,6 +65,13 @@ theme_override_fonts/font = ExtResource("3_8ln24")
 theme_override_font_sizes/font_size = 32
 text = "Créditos"
 
+[node name="TesteBatalha" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2043774144]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "Batalha Teste"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/CreditosButton" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TesteBatalha" to="." method="_on_teste_batalha_pressed"]

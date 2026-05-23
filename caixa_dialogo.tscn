@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bfpt5jsjk66g8"]
+
+[ext_resource type="Script" uid="uid://dxkaa6dunxe02" path="res://caixa_dialogo.gd" id="1_g3ld6"]
+
+[node name="caixa_dialogo" type="HBoxContainer" unique_id=1424237801]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -555.5
+offset_top = -169.0
+offset_right = 555.5
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_g3ld6")
+
+[node name="imagemPersonagem" type="TextureRect" parent="." unique_id=388324072]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="PainelTexto" type="Panel" parent="." unique_id=1395130765]
+custom_minimum_size = Vector2(961, 0)
+layout_mode = 2
+
+[node name="Texto" type="RichTextLabel" parent="PainelTexto" unique_id=858119451]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="botão_avancar" type="Button" parent="PainelTexto/Texto" unique_id=652899969]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

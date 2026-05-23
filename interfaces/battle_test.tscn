@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://dd5bqypum3dno"]
+
+[ext_resource type="Script" uid="uid://cug6xmoc2wujx" path="res://interfaces/battle_test.gd" id="1_kt1od"]
+[ext_resource type="PackedScene" uid="uid://ba6bjjdvidxkm" path="res://entidades/classes/rogue/rogue.tscn" id="2_0q417"]
+[ext_resource type="PackedScene" uid="uid://82n3b2d5p5yj" path="res://entidades/classes/warrior/warrior.tscn" id="2_jhtm6"]
+[ext_resource type="PackedScene" uid="uid://dpp76jm5htwyn" path="res://entidades/classes/mage/mage.tscn" id="3_0q417"]
+
+[node name="BattleTest" type="Node2D" unique_id=978144693]
+script = ExtResource("1_kt1od")
+ataque_grupo = null
+
+[node name="Rogue" parent="." unique_id=580321455 instance=ExtResource("2_0q417")]
+position = Vector2(854, 241)
+scale = Vector2(0.5102701, 0.42617473)
+especial_adagas_envenenadas = 2
+especial_invisibilidade = 2
+especial_arco_e_flecha = 2
+adagas = true
+arco_e_flecha = true
+constituicao = 7
+vida = 10
+forca = 4
+destreza = 7
+magia = 3
+vivo = true
+
+[node name="Warrior" parent="." unique_id=1644064270 instance=ExtResource("2_jhtm6")]
+position = Vector2(279, 114.99999)
+scale = Vector2(0.21750532, 0.19100595)
+especial_defesa = 2
+especial_ataque = 2
+especial_chamar_inimigos = 2
+constituicao = 7
+vida = 10
+forca = 7
+destreza = 2
+magia = 1
+vivo = true
+
+[node name="Mage" parent="." unique_id=919070144 instance=ExtResource("3_0q417")]
+position = Vector2(709, 99)
+especial_cura = 2
+especial_barreira_protetora = 2
+especial_bola_de_fogo = 2
+constituicao = 5
+vida = 10
+forca = 3
+destreza = 4
+magia = 9
+vivo = true
+
+[node name="WarriorAttack" type="Button" parent="." unique_id=1899730180]
+offset_left = 260.0
+offset_top = 165.0
+offset_right = 268.0
+offset_bottom = 173.0
+scale = Vector2(0.8717883, 0.9880543)
+text = "Atacar"
+
+[node name="MageAttack" type="Button" parent="." unique_id=14583025]
+offset_left = 632.0
+offset_top = 180.0
+offset_right = 691.0
+offset_bottom = 211.0
+text = "Atacar"
+
+[node name="RogueAttack" type="Button" parent="." unique_id=300358417]
+offset_left = 802.0
+offset_top = 350.0
+offset_right = 861.0
+offset_bottom = 381.0
+text = "Atacar"
+
+[node name="VidaGuerreiro" type="Label" parent="." unique_id=245223119]
+visible = false
+offset_left = 261.0
+offset_top = 40.0
+offset_right = 301.0
+offset_bottom = 63.0
+
+[node name="ConstituicaoGuerreiro" type="Label" parent="." unique_id=1345954668]
+visible = false
+offset_left = 338.0
+offset_top = 122.0
+offset_right = 378.0
+offset_bottom = 145.0
+
+[node name="VidaMago" type="Label" parent="." unique_id=1262220744]
+visible = false
+offset_left = 638.0
+offset_top = 43.0
+offset_right = 678.0
+offset_bottom = 66.0
+
+[node name="VidaLadino" type="Label" parent="." unique_id=1112208164]
+visible = false
+offset_left = 751.0
+offset_top = 245.0
+offset_right = 791.0
+offset_bottom = 268.0
+
+[node name="Especiais" type="VBoxContainer" parent="." unique_id=1043726613]
+offset_left = 249.0
+offset_top = 206.99998
+offset_right = 379.0
+offset_bottom = 308.0
+scale = Vector2(0.6043422, 0.6269436)
+
+[node name="AtaqueEspecial" type="Button" parent="Especiais" unique_id=613213671]
+layout_mode = 2
+text = "Ataque Especial"
+
+[node name="Defesa" type="Button" parent="Especiais" unique_id=1807129449]
+layout_mode = 2
+text = "Defesa"
+
+[node name="ChamarInimigos" type="Button" parent="Especiais" unique_id=1833074337]
+layout_mode = 2
+text = "Chamr Inimigos"
+
+[node name="Especiais2" type="VBoxContainer" parent="." unique_id=449721851]
+offset_left = 626.0
+offset_top = 218.0
+offset_right = 756.0
+offset_bottom = 319.0
+scale = Vector2(0.6043422, 0.6269436)
+
+[node name="Cura" type="Button" parent="Especiais2" unique_id=113184066]
+layout_mode = 2
+text = "Cura"
+
+[node name="BarreiraProtetora" type="Button" parent="Especiais2" unique_id=1837359694]
+layout_mode = 2
+text = "Barreira Protetora"
+
+[node name="BolaDeFogo" type="Button" parent="Especiais2" unique_id=1117459794]
+layout_mode = 2
+text = "Bola de Fogo"
+
+[node name="Especiais3" type="VBoxContainer" parent="." unique_id=914423955]
+offset_left = 787.0
+offset_top = 385.99997
+offset_right = 938.0
+offset_bottom = 487.0
+scale = Vector2(0.6043422, 0.6269436)
+
+[node name="AdagasEnvenenadas" type="Button" parent="Especiais3" unique_id=654599405]
+layout_mode = 2
+text = "Adagas Envenenadas"
+
+[node name="Invisibilidade" type="Button" parent="Especiais3" unique_id=782111585]
+layout_mode = 2
+text = "Invisibilidade"
+
+[node name="ArcoEFlecha" type="Button" parent="Especiais3" unique_id=1609832124]
+layout_mode = 2
+text = "Arco e Flecha"
+
+[connection signal="pressed" from="WarriorAttack" to="." method="_on_warrior_attack_pressed"]
+[connection signal="pressed" from="MageAttack" to="." method="_on_mage_attack_pressed"]
+[connection signal="pressed" from="RogueAttack" to="." method="_on_rogue_attack_pressed"]
+[connection signal="pressed" from="Especiais/AtaqueEspecial" to="." method="_on_ataque_especial_pressed"]
+[connection signal="pressed" from="Especiais/Defesa" to="." method="_on_defesa_pressed"]
+[connection signal="pressed" from="Especiais/ChamarInimigos" to="." method="_on_chamar_inimigos_pressed"]
+[connection signal="pressed" from="Especiais2/Cura" to="." method="_on_cura_pressed"]
+[connection signal="pressed" from="Especiais2/BarreiraProtetora" to="." method="_on_barreira_protetora_pressed"]
+[connection signal="pressed" from="Especiais2/BolaDeFogo" to="." method="_on_bola_de_fogo_pressed"]
+[connection signal="pressed" from="Especiais3/AdagasEnvenenadas" to="." method="_on_adagas_envenenadas_pressed"]
+[connection signal="pressed" from="Especiais3/Invisibilidade" to="." method="_on_invisibilidade_pressed"]
+[connection signal="pressed" from="Especiais3/ArcoEFlecha" to="." method="_on_arco_e_flecha_pressed"]

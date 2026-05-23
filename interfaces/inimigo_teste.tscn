@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cfh0dngq0u54d"]
+
+[ext_resource type="Script" uid="uid://cc43se60w5q0x" path="res://interfaces/inimigo_teste.gd" id="1_4re1m"]
+[ext_resource type="Texture2D" uid="uid://bhljof8dqti54" path="res://assets/image-removebg-preview (21).png" id="2_wmy1g"]
+
+[node name="InimigoTeste" type="Node2D" unique_id=508027016]
+script = ExtResource("1_4re1m")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=475147113]
+texture = ExtResource("2_wmy1g")
