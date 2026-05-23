@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ce4l0a58yd8wo"]
+
+[ext_resource type="Script" uid="uid://dmjia6hickag1" path="res://interfaces/cena_game_over.gd" id="1_gel4s"]
+[ext_resource type="Texture2D" uid="uid://diyn23cfcfddn" path="res://assets/background/game_over.png" id="2_o8ge6"]
+[ext_resource type="Texture2D" uid="uid://chh7ns5qj5sqi" path="res://assets/botoes/voltar.png" id="3_htxrp"]
+
+[node name="cena_game_over" type="Control" unique_id=780038146]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gel4s")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=250255185]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_o8ge6")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=900711515]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -208.0
+offset_right = -85.0
+offset_bottom = -154.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_htxrp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]

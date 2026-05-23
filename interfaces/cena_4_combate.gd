@@ -37,6 +37,7 @@ func executar_loop_de_combate() -> void:
 			$caixa_dialogo.visible = true # diálogo visível
 			$caixa_dialogo/PainelTexto/Texto.text = "O Inimigo foi derrotado!"
 			batalha_ativa = false
+			get_tree().change_scene_to_file("res://interfaces/cena_game_over.tscn")
 			break
 			
 		elif Warrior.vida <= 0 and Mage.vida <= 0 and Rogue.vida <= 0:
@@ -44,6 +45,7 @@ func executar_loop_de_combate() -> void:
 			$caixa_dialogo.visible = true # diálogo visível
 			$caixa_dialogo/PainelTexto/Texto.text = "Fim de Jogo! Todos os heróis morreram."
 			batalha_ativa = false
+			get_tree().change_scene_to_file("res://interfaces/creditos.tscn")
 			break
 
 		# 2. LOGICA DE FILTRAGEM: Se o personagem do turno atual estiver morto,
@@ -76,7 +78,7 @@ func executar_loop_de_combate() -> void:
 				var dano = Warrior.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
 				$caixa_dialogo/PainelTexto/Texto.text = "Tome isso!" #frase de ataque
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
-				$caixa_dialogo/PainelTexto/Texto.text = "Mas, antes, você precisa rodar o dado" # frase do dado 
+				$caixa_dialogo/PainelTexto/Texto.text = "Minha vez de rodar o dado!" # frase do dado 
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				$caixa_dialogo.visible = false
 				# RODANDO O DADO
@@ -89,7 +91,7 @@ func executar_loop_de_combate() -> void:
 						dano = dano * 2
 					if InimigoTeste.usando_escudo:
 						dano /= 2
-						InimigoTeste.escudo = false
+						InimigoTeste.usando_escudo = false
 					InimigoTeste.receber_dano(dano)
 					$perda_vida_inimigo.visible = true
 					$perda_vida_inimigo.text = "-" + str(dano)
@@ -127,7 +129,7 @@ func executar_loop_de_combate() -> void:
 				var dano = Mage.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
 				$caixa_dialogo/PainelTexto/Texto.text = "Tome isso!" #frase de ataque
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
-				$caixa_dialogo/PainelTexto/Texto.text = "Mas, antes, você precisa rodar o dado" # frase do dado 
+				$caixa_dialogo/PainelTexto/Texto.text = "Minha vez de rodar o dado!" # frase do dado 
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				$caixa_dialogo.visible = false
 				# RODANDO O DADO
@@ -175,7 +177,7 @@ func executar_loop_de_combate() -> void:
 				var dano = Rogue.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
 				$caixa_dialogo/PainelTexto/Texto.text = "Tome isso!" #frase de ataque
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
-				$caixa_dialogo/PainelTexto/Texto.text = "Mas, antes, você precisa rodar o dado" # frase do dado 
+				$caixa_dialogo/PainelTexto/Texto.text = "Minha vez de rodar o dado!" # frase do dado 
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				$caixa_dialogo.visible = false
 				# RODANDO O DADO
@@ -188,7 +190,7 @@ func executar_loop_de_combate() -> void:
 						dano = dano * 2
 					if InimigoTeste.usando_escudo:
 						dano /= 2
-						InimigoTeste.escudo = false
+						InimigoTeste.usando_escudo = false
 					InimigoTeste.receber_dano(dano)
 					$perda_vida_inimigo.visible = true
 					$perda_vida_inimigo.text = "-" + str(dano)
@@ -234,7 +236,7 @@ func executar_loop_de_combate() -> void:
 
 		# Atualiza a tela logo após o dano ser aplicado (para atualizar as barras/textos de vida)
 		atualizar_interface()
-
+	
 
 # Função para gerenciar o ataque e o sorteio do Inimigo (permanece igual)
 func jogar_turno_do_inimigo() -> void:
@@ -261,7 +263,7 @@ func jogar_turno_do_inimigo() -> void:
 	
 	# diálogo do dado
 	$caixa_dialogo.visible = true
-	$caixa_dialogo/PainelTexto/Texto.text = "Gire o dado"
+	$caixa_dialogo/PainelTexto/Texto.text = "Agora você, {Master}, deve rodar o dado!".format({"Master": Master.nome})
 	await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 	$caixa_dialogo.visible = false
 	$dado.visible = true # dado aparece na tela

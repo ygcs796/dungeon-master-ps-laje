@@ -3,7 +3,7 @@ class_name Inimigo
 
 # Atributos básicos do inimigo
 @export var nome: String = "Reston"
-@export var vida: int = 100
+@export var vida: int = 50
 @export var dano_base: int = 10
 @export var dano_ataque_especial: int = 20
 @export var movimentos_certos = 0

@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name NPC
 
 @export var constituicao : int
-@export var vida: int = 50
+@export var vida: int = 25
 @export var forca : int
 @export var destreza : int
 @export var magia : int
