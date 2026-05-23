@@ -21,11 +21,13 @@ Mage="*uid://cpt4ojovhlpvd"
 Rogue="*uid://dlgpnlurimpmt"
 Warrior="*uid://cb2vky0k3f6q"
 InimigoTeste="*uid://cc43se60w5q0x"
+Master="*uid://s7hwhfcwwrr0"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [physics]
 

@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dawnvi5wd6fbv" path="res://interfaces/cena_4_combate.gd" id="1_hvo0j"]
 [ext_resource type="Texture2D" uid="uid://ohotxlg5jkmv" path="res://assets/background/tela_caverna.png" id="2_2ko8i"]
-[ext_resource type="Texture2D" uid="uid://duvv5dlmugfa3" path="res://assets/npc/warrior.png" id="4_kiu7s"]
-[ext_resource type="Texture2D" uid="uid://dpw617drticm1" path="res://assets/npc/mage.png" id="5_mavfg"]
-[ext_resource type="Texture2D" uid="uid://b325c2uej78u4" path="res://assets/npc/rogue.png" id="6_6u6il"]
+[ext_resource type="Texture2D" uid="uid://cnewex7dtqogk" path="res://assets/npc/warrior.png" id="4_kiu7s"]
+[ext_resource type="Texture2D" uid="uid://dso7opid5oiey" path="res://assets/npc/mage.png" id="5_mavfg"]
+[ext_resource type="Texture2D" uid="uid://dkj2dvo5xa3ak" path="res://assets/npc/rogue.png" id="6_6u6il"]
 [ext_resource type="Script" uid="uid://cc43se60w5q0x" path="res://interfaces/inimigo_teste.gd" id="7_r3snv"]
 [ext_resource type="Texture2D" uid="uid://bhljof8dqti54" path="res://assets/image-removebg-preview (21).png" id="8_3lptg"]
 [ext_resource type="PackedScene" uid="uid://bfpt5jsjk66g8" path="res://caixa_dialogo.tscn" id="9_buhje"]

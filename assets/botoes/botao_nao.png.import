@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso7opid5oiey"
-path="res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"
+uid="uid://u1jsbrenxf4j"
+path="res://.godot/imported/botao_nao.png-0d85e0046bde9c69fe48e73c88a9704d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/mage.png"
-dest_files=["res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"]
+source_file="res://assets/botoes/botao_nao.png"
+dest_files=["res://.godot/imported/botao_nao.png-0d85e0046bde9c69fe48e73c88a9704d.ctex"]
 
 [params]
 

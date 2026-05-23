@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso7opid5oiey"
-path="res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"
+uid="uid://cfn2k173tjov0"
+path="res://.godot/imported/entrada_caverna.png-3ac87847ccc38a0c4a5a504a1bb77bbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/mage.png"
-dest_files=["res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"]
+source_file="res://assets/background/entrada_caverna.png"
+dest_files=["res://.godot/imported/entrada_caverna.png-3ac87847ccc38a0c4a5a504a1bb77bbc.ctex"]
 
 [params]
 

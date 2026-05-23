@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso7opid5oiey"
-path="res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"
+uid="uid://c17eh1snh27sp"
+path="res://.godot/imported/ladina_personagem.png-bfed4fae4c8bfadbc3063e91955e5016.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/mage.png"
-dest_files=["res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"]
+source_file="res://assets/npc/ladina_personagem.png"
+dest_files=["res://.godot/imported/ladina_personagem.png-bfed4fae4c8bfadbc3063e91955e5016.ctex"]
 
 [params]
 

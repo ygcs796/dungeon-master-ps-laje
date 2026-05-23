@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dso7opid5oiey"
-path="res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"
+uid="uid://035hc8l5ejqk"
+path="res://.godot/imported/fundo_preto.png-789754d48ea8c78edf9d26350007704e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/npc/mage.png"
-dest_files=["res://.godot/imported/mage.png-06bdd386eb8d907b3a3925063be948aa.ctex"]
+source_file="res://assets/background/fundo_preto.png"
+dest_files=["res://.godot/imported/fundo_preto.png-789754d48ea8c78edf9d26350007704e.ctex"]
 
 [params]
 
