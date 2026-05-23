@@ -10,6 +10,7 @@ especial_cura = 0
 especial_barreira_protetora = 0
 especial_bola_de_fogo = 0
 usar_barreira = false
+vida = 10
 
 [node name="Sprite2D" parent="." index="1" unique_id=1188518273]
 scale = Vector2(0.2, 0.2)

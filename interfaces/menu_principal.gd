@@ -27,4 +27,4 @@ func _on_creditos_button_pressed() -> void:
 
 
 func _on_teste_batalha_pressed() -> void:
-	get_tree().change_scene_to_file("res://battle_test.tscn")
+	get_tree().change_scene_to_file("res://interfaces/cena_3_caverna.tscn")

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dd5bqypum3dno"]
 
-[ext_resource type="Script" uid="uid://cug6xmoc2wujx" path="res://battle_test.gd" id="1_kt1od"]
+[ext_resource type="Script" uid="uid://cug6xmoc2wujx" path="res://interfaces/battle_test.gd" id="1_kt1od"]
 [ext_resource type="PackedScene" uid="uid://ba6bjjdvidxkm" path="res://entidades/classes/rogue/rogue.tscn" id="2_0q417"]
 [ext_resource type="PackedScene" uid="uid://82n3b2d5p5yj" path="res://entidades/classes/warrior/warrior.tscn" id="2_jhtm6"]
 [ext_resource type="PackedScene" uid="uid://dpp76jm5htwyn" path="res://entidades/classes/mage/mage.tscn" id="3_0q417"]

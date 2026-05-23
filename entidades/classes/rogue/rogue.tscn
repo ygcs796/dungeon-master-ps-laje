@@ -12,6 +12,7 @@ especial_arco_e_flecha = 0
 adagas = false
 arco_e_flecha = false
 usar_invisibilidade = false
+vida = 10
 
 [node name="Sprite2D" parent="." index="1" unique_id=1188518273]
 position = Vector2(2.3841858e-07, 0)
