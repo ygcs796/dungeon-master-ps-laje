@@ -6,19 +6,19 @@
 script = ExtResource("1_noxxy")
 
 [node name="dado_texto" type="Label" parent="." unique_id=1886956660]
-offset_left = 341.0
-offset_top = 176.0
-offset_right = 416.0
-offset_bottom = 320.0
-theme_override_font_sizes/font_size = 105
+offset_left = -27.0
+offset_top = -100.0
+offset_right = 55.0
+offset_bottom = 9.0
+theme_override_font_sizes/font_size = 79
 text = "1"
 
 [node name="Button" type="Button" parent="." unique_id=1642870429]
-offset_left = 678.0
-offset_top = 172.0
-offset_right = 835.0
-offset_bottom = 278.0
-theme_override_font_sizes/font_size = 33
+offset_left = -95.0
+offset_top = 12.0
+offset_right = 89.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 25
 text = "RODAR DADO"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

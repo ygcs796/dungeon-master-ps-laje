@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://cm164sjx8n35w" path="res://assets/npc/Captura de tela 2026-05-22 190000.png" id="3_jvdee"]
 [ext_resource type="Texture2D" uid="uid://er5meid57i0g" path="res://assets/npc/Captura de tela 2026-05-22 185946.png" id="4_wsu40"]
 [ext_resource type="Texture2D" uid="uid://bhljof8dqti54" path="res://assets/image-removebg-preview (21).png" id="7_b53t2"]
+[ext_resource type="PackedScene" uid="uid://bfpt5jsjk66g8" path="res://caixa_dialogo.tscn" id="8_e5xlq"]
+[ext_resource type="PackedScene" uid="uid://oyvhaae1gu32" path="res://dado.tscn" id="9_0hfpt"]
 
 [node name="Control" type="Control" unique_id=926389464]
 layout_mode = 3
@@ -129,4 +131,13 @@ offset_right = 645.0
 offset_bottom = 334.0
 scale = Vector2(1.8229818, 1.2854297)
 
+[node name="caixa_dialogo" parent="." unique_id=1424237801 instance=ExtResource("8_e5xlq")]
+layout_mode = 1
+offset_left = -557.5
+offset_right = 557.5
+
+[node name="dado" parent="." unique_id=1118198925 instance=ExtResource("9_0hfpt")]
+position = Vector2(1168, 325)
+
 [connection signal="pressed" from="HBoxContainer/MarginContainer3/Prosseguir" to="." method="_on_prosseguir_pressed"]
+[connection signal="numero_dado" from="dado" to="." method="_on_dado_numero_dado"]
