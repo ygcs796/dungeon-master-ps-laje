@@ -87,7 +87,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="BotaoOpcao1" type="Button" parent="Botoes/MarginContainer" unique_id=873292708]
 layout_mode = 2
-text = "[Mapa da campanha]"
+text = "[1] Mapa da campanha"
 
 [node name="MarginContainer2" type="MarginContainer" parent="Botoes" unique_id=1053125042]
 custom_minimum_size = Vector2(700, 0)
@@ -99,9 +99,9 @@ theme_override_constants/margin_bottom = 20
 
 [node name="BotaoOpcao2" type="Button" parent="Botoes/MarginContainer2" unique_id=5388755]
 layout_mode = 2
-text = "[Terras Baixas, onde os heróis nunca dormem e o perigo
+text = "[2] Terras Baixas, onde os heróis nunca dormem e o perigo
 também não. Onde as cavernas escondem 
-mais segredos do que um amigo traidor] (Requer narrativa 1)
+mais segredos do que um amigo traidor. [Requer narrativa 1]
 "
 
 [node name="MarginContainer3" type="MarginContainer" parent="Botoes" unique_id=1695398002]
@@ -114,7 +114,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="BotaoOpcao3" type="Button" parent="Botoes/MarginContainer3" unique_id=1580468573]
 layout_mode = 2
-text = "[Ficar em silêncio]"
+text = "[3] Ficar em silêncio"
 
 [node name="BoxContainer" type="BoxContainer" parent="." unique_id=529025357]
 visible = false

@@ -23,6 +23,9 @@ var texto_mago = [
 func _ready() -> void:
 	$FadeOutTela.visible = false
 	$BarraDialogo.visible = false
+	
+	if(Master.narrativa == 0):
+		$Botoes/MarginContainer2/BotaoOpcao2.disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -54,6 +57,7 @@ func _on_botao_opcao_1_pressed() -> void:
 	
 
 func _on_botao_opcao_2_pressed() -> void:
+	
 	$Botoes.visible = false
 	$BarraDialogo.visible = true
 	decisao_1 = 2

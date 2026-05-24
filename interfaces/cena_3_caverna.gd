@@ -30,6 +30,9 @@ var texto_guerreiro = [
 func _ready() -> void:
 	$BarraDialogo.visible = false
 	$HeroiPerdido.visible = false
+	
+	$SeletorEscolhas/MarginContainer2/BotaoOpcao2.disabled = (Master.narrativa < 1)
+	$SeletorEscolhas/MarginContainer3/BotaoOpcao3.disabled = (Master.narrativa < 3)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

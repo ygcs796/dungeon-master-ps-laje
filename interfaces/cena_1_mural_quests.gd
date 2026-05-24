@@ -142,7 +142,12 @@ func _on_botao_texto_pressed() -> void:
 				
 
 func _on_botao_confirmar_nome_pressed() -> void:
-	Master.nome = $JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer/InputInserirNome.text
+	
+	var nome_digitado = $JanelaInserirNome/ImagemInserirNome/BarraInserirNome/MarginContainer/InputInserirNome.text
+	
+	if(nome_digitado.strip_edges().is_empty()):
+		return
+	Master.nome = nome_digitado
 	$JanelaInserirNome.queue_free()
 	_on_botao_texto_pressed()
 	
