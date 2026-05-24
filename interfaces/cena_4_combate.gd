@@ -224,7 +224,7 @@ func executar_loop_de_combate() -> void:
 				if InimigoTeste.vida > 0:
 					# TURNO DO INIMIGO
 					$caixa_dialogo.visible = true # diálogo visível
-					$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-23 020833.png")
+					$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/metade_esqueleto.png")
 					$caixa_dialogo/PainelTexto/Texto.text = "Uma batalha boa para mexer o esqueleto!" #frase inicial
 					await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 					$caixa_dialogo/imagemPersonagem.texture = null
@@ -258,6 +258,8 @@ func jogar_turno_do_inimigo() -> void:
 	$botoes_mestre.visible = true
 	if InimigoTeste.pode_usar_ataque_especial:
 		$botoes_mestre/HBoxContainer/MarginContainer/ataque_especial.disabled = false
+	else:
+		$botoes_mestre/HBoxContainer/MarginContainer/ataque_especial.disabled = true
 	var botao_apertado = await $botoes_mestre.algum_botao_apertado
 	$botoes_mestre.visible = false
 	
@@ -317,7 +319,7 @@ func jogar_turno_do_inimigo() -> void:
 				InimigoTeste.movimentos_certos += 1 
 	else:
 		$caixa_dialogo.visible = true
-		$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-23 020833.png")
+		$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/metade_esqueleto.png")
 		if resultado == 1:
 			match botao_apertado:
 				1: # ataque simples

@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cnewex7dtqogk" path="res://assets/npc/warrior.png" id="4_kiu7s"]
 [ext_resource type="Texture2D" uid="uid://dso7opid5oiey" path="res://assets/npc/mage.png" id="5_mavfg"]
 [ext_resource type="Texture2D" uid="uid://dkj2dvo5xa3ak" path="res://assets/npc/rogue.png" id="6_6u6il"]
+[ext_resource type="Texture2D" uid="uid://c5lf2m3h5xjsp" path="res://assets/esqueleto.png" id="7_dooxi"]
 [ext_resource type="Script" uid="uid://cc43se60w5q0x" path="res://interfaces/inimigo_teste.gd" id="7_r3snv"]
-[ext_resource type="Texture2D" uid="uid://bhljof8dqti54" path="res://assets/image-removebg-preview (21).png" id="8_3lptg"]
 [ext_resource type="PackedScene" uid="uid://bfpt5jsjk66g8" path="res://caixa_dialogo.tscn" id="9_buhje"]
 [ext_resource type="PackedScene" uid="uid://oyvhaae1gu32" path="res://dado.tscn" id="10_akwui"]
 [ext_resource type="Script" uid="uid://cbrq16tyergeo" path="res://interfaces/botoes_mestre.gd" id="11_hgt6k"]
@@ -83,9 +83,9 @@ layout_mode = 2
 script = ExtResource("7_r3snv")
 
 [node name="Sprite2D" type="Sprite2D" parent="Inimigo" unique_id=1243319064]
-position = Vector2(645, 477.00003)
-scale = Vector2(0.6026057, 0.43694666)
-texture = ExtResource("8_3lptg")
+position = Vector2(751, 594)
+scale = Vector2(0.22056448, 0.1599303)
+texture = ExtResource("7_dooxi")
 
 [node name="NomeInimigo" type="Label" parent="Inimigo" unique_id=45218936]
 offset_left = 603.00006
