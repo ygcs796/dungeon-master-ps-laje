@@ -46,7 +46,7 @@ func iniciar_barra_de_progresso():
 func mudanca_dialogo(texto, imagem = null) -> void:
 	
 	if(imagem != null):
-		imagem_dialogo.texture = load("res://assets/npc/{imagem}.png".format({"imagem": imagem}))
+		imagem_dialogo.texture = load("res://assets/npc/{imagem}_falando.png".format({"imagem": imagem}))
 	texto_dialogo.text = texto
 	
 func _on_botao_opcao_1_pressed() -> void:

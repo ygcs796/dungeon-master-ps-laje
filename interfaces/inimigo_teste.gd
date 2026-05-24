@@ -13,7 +13,6 @@ var quer_usar_ataque_especial
 
 # Função para o inimigo CAUSAR dano em alguém
 func dar_dano(quer_usar_ataque_especial:bool) -> int:
-	print(nome, " preparou o ataque!")
 	if quer_usar_ataque_especial:
 		return dano_ataque_especial 
 	return dano_base
@@ -21,9 +20,3 @@ func dar_dano(quer_usar_ataque_especial:bool) -> int:
 # Função para o inimigo RECEBER dano dos heróis
 func receber_dano(quantidade: int) -> void:
 	vida -= quantidade
-	print(nome, " recebeu ", quantidade, " de dano. Vida restante: ", vida)
-	
-	# Se a vida zerar ou negativar, ele morre
-	if vida <= 0:
-		print(nome, " foi derrotado!")
-		queue_free() # Apaga o inimigo da cena

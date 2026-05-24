@@ -42,7 +42,7 @@ func _process(delta: float) -> void:
 func mudanca_dialogo(texto, imagem = null) -> void:
 
 	if(imagem != null):
-		imagem_dialogo.texture = load("res://assets/npc/{imagem}.png".format({"imagem": imagem}))
+		imagem_dialogo.texture = load("res://assets/npc/{imagem}_falando.png".format({"imagem": imagem}))
 	texto_dialogo.text = texto
 
 

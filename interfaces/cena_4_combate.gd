@@ -72,7 +72,7 @@ func executar_loop_de_combate() -> void:
 			0:
 				# TURNO DO GUERREIRO
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/warrior.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/warrior_falando.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Com minha resistência, você nunca irá me vencer!" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Warrior.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
@@ -123,7 +123,7 @@ func executar_loop_de_combate() -> void:
 			1:
 				# TURNO DO MAGO
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/mage.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/mage_falando.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Minha magia é muito forte pra você" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Mage.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
@@ -171,7 +171,7 @@ func executar_loop_de_combate() -> void:
 			2:
 				# TURNO DO LADINA
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/rogue.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/rogue_falando.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Furtividade é o meu forte. Prepare-se!" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Rogue.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
@@ -316,9 +316,9 @@ func jogar_turno_do_inimigo() -> void:
 				InimigoTeste.usando_escudo = true
 				InimigoTeste.movimentos_certos += 1 
 	else:
+		$caixa_dialogo.visible = true
+		$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-23 020833.png")
 		if resultado == 1:
-			$caixa_dialogo.visible = true
-			$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-23 020833.png")
 			match botao_apertado:
 				1: # ataque simples
 					var dano_do_inimigo = InimigoTeste.dar_dano(false)
@@ -331,8 +331,8 @@ func jogar_turno_do_inimigo() -> void:
 				3: # escudo
 					InimigoTeste.usando_escudo = false
 			
-			$caixa_dialogo/PainelTexto/Texto.text = "Não é possível, eu errei o meu próprio movimento!"
-			await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
+		$caixa_dialogo/PainelTexto/Texto.text = "Não é possível, eu errei o meu próprio movimento!"
+		await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 	
 	if InimigoTeste.movimentos_certos == 2:
 		InimigoTeste.pode_usar_ataque_especial = true
