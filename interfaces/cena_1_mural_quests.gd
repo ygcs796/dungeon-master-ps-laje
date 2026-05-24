@@ -52,7 +52,7 @@ func _ready() -> void:
 	$JanelaEscolha.visible = false
 	$FadeOutTela.visible = false
 	
-	$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
+	$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage_falando.png")
 	$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago[0]
 	$ImagemGameOver.visible = false
 	$BotaoGameOver.visible = false
@@ -73,7 +73,7 @@ func _on_botao_texto_pressed() -> void:
 		2:
 			$JanelaInserirNome.popup()
 		3:
-			$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue.png")
+			$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue_falando.png")
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_ladina[0].format({"Master": Master.nome})
 		4:
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_ladina[1]
@@ -84,7 +84,7 @@ func _on_botao_texto_pressed() -> void:
 		7:
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_ladina[4]
 		8:
-			$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/warrior.png")
+			$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/warrior_falando.png")
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_guerreiro[0]
 		9:
 			$BarraDialogo/PainelTexto/TextoDialogo.text = texto_guerreiro[1]
@@ -102,18 +102,18 @@ func _on_botao_texto_pressed() -> void:
 			if(clicou_sim):
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_guerreiro_resposta_positiva[0]
 			else:
-				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue.png")
+				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue_falando.png")
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_ladina_resposta_negativa[0]
 		16:
 			if(clicou_sim):
-				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue.png")
+				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/rogue_falando.png")
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_ladina_resposta_positiva[0]
 			else:
-				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
+				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage_falando.png")
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago_resposta_negativa[0]
 		17:
 			if(clicou_sim):
-				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage.png")
+				$BarraDialogo/ImagemPersonagem.texture = load("res://assets/npc/mage_falando.png")
 				$BarraDialogo/PainelTexto/TextoDialogo.text = texto_mago_resposta_positiva[0]
 			else:
 				$FadeOutTela.visible = true
