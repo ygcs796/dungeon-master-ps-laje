@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dnjlkhqcbnf7n" path="res://interfaces/menu_principal.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://sibrkl8oxd1d" path="res://assets/background/tela_quadro_missoes.png" id="2_aevnb"]
-[ext_resource type="FontFile" uid="uid://ch2yt0stlh31e" path="res://assets/fonts/Deutsch.ttf" id="3_8ln24"]
+[ext_resource type="FontFile" uid="uid://drrwnjdfplfgs" path="res://assets/fonts/Dearest.ttf" id="3_7mnfp"]
+[ext_resource type="Texture2D" uid="uid://c2ese4xnctrgu" path="res://assets/botoes/play.png" id="4_leypi"]
+[ext_resource type="Texture2D" uid="uid://dek2rc3v4tuur" path="res://assets/background/papel.png" id="5_leypi"]
 
 [node name="Main_menu" type="Control" unique_id=1711472036]
 layout_mode = 3
@@ -24,54 +26,76 @@ texture = ExtResource("2_aevnb")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1544424561]
+[node name="ExitButton" type="Button" parent="." unique_id=1967517210]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 793.0
+offset_top = 493.0
+offset_right = 986.0
+offset_bottom = 543.0
+theme_override_fonts/font = ExtResource("3_7mnfp")
+theme_override_font_sizes/font_size = 32
+text = "Sair do Jogo"
+
+[node name="CreditosButton" type="Button" parent="." unique_id=565315963]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 0
+offset_left = 348.0
+offset_top = 498.0
+offset_right = 472.0
+offset_bottom = 550.0
+theme_override_fonts/font = ExtResource("3_7mnfp")
+theme_override_font_sizes/font_size = 32
+text = "Créditos"
+
+[node name="PlayButton" type="TextureButton" parent="." unique_id=1689560987]
+layout_mode = 0
+offset_left = 593.0
+offset_top = 468.0
+offset_right = 633.0
+offset_bottom = 508.0
+scale = Vector2(3.1351352, 1.1944444)
+texture_normal = ExtResource("4_leypi")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=339517368]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=210235707]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 162.00002
+offset_top = -81.99999
+offset_right = 1584.7332
+offset_bottom = 611.6284
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.6788661, 0.42255723)
+texture = ExtResource("5_leypi")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=602829152]
-layout_mode = 2
-theme_override_constants/separation = 16
+[node name="Label" type="Label" parent="Panel" unique_id=2104977450]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 348.0
+offset_top = 44.0
+offset_right = 906.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7mnfp")
+theme_override_font_sizes/font_size = 82
+text = "Dungeon Master"
 
-[node name="Title" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1225318132]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
-theme_override_font_sizes/font_size = 62
-text = "Dungeons Master
-[Adicionar png no futuro]"
-horizontal_alignment = 1
-
-[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=367200158]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
-theme_override_font_sizes/font_size = 32
-text = "Iniciar Jogo"
-
-[node name="ExitButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1967517210]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
-theme_override_font_sizes/font_size = 32
-text = "Sair do Jogo"
-
-[node name="CreditosButton" type="Button" parent="CenterContainer/VBoxContainer" unique_id=565315963]
-custom_minimum_size = Vector2(0, 50)
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
-theme_override_font_sizes/font_size = 32
-text = "Créditos"
-
-[node name="TesteBatalha" type="Button" parent="CenterContainer/VBoxContainer" unique_id=2043774144]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("3_8ln24")
-theme_override_font_sizes/font_size = 32
-text = "Batalha Teste"
-
-[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/CreditosButton" to="." method="_on_creditos_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/TesteBatalha" to="." method="_on_teste_batalha_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="CreditosButton" to="." method="_on_creditos_button_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]

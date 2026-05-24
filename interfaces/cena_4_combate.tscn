@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bvvt7wp0iki1n"]
 
 [ext_resource type="Script" uid="uid://dawnvi5wd6fbv" path="res://interfaces/cena_4_combate.gd" id="1_hvo0j"]
-[ext_resource type="Texture2D" uid="uid://ohotxlg5jkmv" path="res://assets/background/tela_caverna.png" id="2_2ko8i"]
+[ext_resource type="Texture2D" uid="uid://bok6q5tsar0dg" path="res://assets/background/corredor_da_caverna.png" id="2_dooxi"]
 [ext_resource type="Texture2D" uid="uid://cnewex7dtqogk" path="res://assets/npc/warrior.png" id="4_kiu7s"]
 [ext_resource type="Texture2D" uid="uid://dso7opid5oiey" path="res://assets/npc/mage.png" id="5_mavfg"]
 [ext_resource type="Texture2D" uid="uid://dkj2dvo5xa3ak" path="res://assets/npc/rogue.png" id="6_6u6il"]
@@ -27,7 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_2ko8i")
+texture = ExtResource("2_dooxi")
 expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2019594165]

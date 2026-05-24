@@ -13,18 +13,12 @@ func _process(delta: float) -> void:
 
 
 func _on_play_button_pressed() -> void:
-	print("Iniciar Jogo")
 	get_tree().change_scene_to_file("res://interfaces/cena_1_mural_quests.tscn")
 
 
 func _on_exit_button_pressed() -> void:
-	print("Saiu do jogo")
 	get_tree().quit()
 
 
 func _on_creditos_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://interfaces/creditos.tscn")
-
-
-func _on_teste_batalha_pressed() -> void:
-	get_tree().change_scene_to_file("res://interfaces/cena_3_caverna.tscn")

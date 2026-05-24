@@ -72,7 +72,7 @@ func executar_loop_de_combate() -> void:
 			0:
 				# TURNO DO GUERREIRO
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-22 185939.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/warrior.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Com minha resistência, você nunca irá me vencer!" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Warrior.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
@@ -123,7 +123,7 @@ func executar_loop_de_combate() -> void:
 			1:
 				# TURNO DO MAGO
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-22 190000.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/mage.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Minha magia é muito forte pra você" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Mage.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
@@ -171,7 +171,7 @@ func executar_loop_de_combate() -> void:
 			2:
 				# TURNO DO LADINA
 				$caixa_dialogo.visible = true # diálogo visível
-				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/Captura de tela 2026-05-22 185946.png")
+				$caixa_dialogo/imagemPersonagem.texture = load("res://assets/npc/rogue.png")
 				$caixa_dialogo/PainelTexto/Texto.text = "Furtividade é o meu forte. Prepare-se!" #frase inicial
 				await $"caixa_dialogo/PainelTexto/Texto/botão_avancar".pressed
 				var dano = Rogue.atacar() # ele ataca de qualquer jeito, eu só decido o destino do dano que ele dá
